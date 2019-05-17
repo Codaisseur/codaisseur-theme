@@ -28,7 +28,7 @@ interface IStatusColors {
   success: string
 }
 
-// Extending main PalleteOptions 
+// Extending main PalleteOptions
 export interface IPaletteOptions extends Partial<PaletteOptions> {
   status: IStatusColors
 }
@@ -63,7 +63,7 @@ export const primary: ColorPartial = {
   A200: '#FF9A9B',
   A400: '#FF6769',
   A700: '#FF4D50',
-};
+}
 
 export const secondary: ColorPartial = {
   // http://mcg.mbitson.com/#!?mcgpalette0=%23084dd2

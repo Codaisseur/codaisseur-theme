@@ -12,13 +12,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
     "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",

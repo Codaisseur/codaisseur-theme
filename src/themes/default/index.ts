@@ -81,7 +81,7 @@ const theme = createMuiTheme({
   // mixins: {},
   // spacing: 0,
   // transitions: {},
-});
+})
 
 export default responsiveFontSizes(theme, {
   breakpoints: ['sm', 'md', 'lg'],
