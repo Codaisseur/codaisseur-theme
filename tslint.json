@@ -1,0 +1,48 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier",
+    "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+    "prettier": [
+      true,
+      {
+        "printWidth": 90,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "semi": false
+      }
+    ],
+    "no-var-requires": false,
+    "no-console": false,
+    "member-access": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "interface-name": false,
+    "no-submodule-imports": false,
+    "one-variable-per-declaration": false,
+    "no-unused-variable": [
+      true, 
+      {
+        "ignore-pattern": "^_"
+      }
+    ],
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ]
+  },
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "build"
+    ]
+  }
+}
