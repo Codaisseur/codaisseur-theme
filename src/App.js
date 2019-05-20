@@ -3,20 +3,11 @@ import React from "react";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline, Button, Typography, Grid, Container, Paper } from "@material-ui/core";
 
-import { Button as MuiButton } from '@material-ui/core'
-
-import theme from "./themes/default";
+import theme from "./themes/codaisseur";
 
 const colors = ["primary", "secondary", "default", "inherit"];
 const variants = ["text", "outlined", "contained"];
 const sizes = ["small", "medium", "large"];
-
-const Theme = (props) => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    {props.children}
-  </ThemeProvider>
-)
 
 function App() {
   return (
