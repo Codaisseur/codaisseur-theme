@@ -6,8 +6,6 @@ import {
 
 import { CommonColors } from '@material-ui/core/colors/common'
 
-import { rgb } from '../../lib'
-
 // Extending CommonColors from MUI
 export interface ICommonColors extends CommonColors {
   darkOrange: string
@@ -103,13 +101,25 @@ export const status: IStatusColors = {
   success: 'green',
 }
 
-export const gradient = {
+const gradientList = ['#D7461A', '#C1272D', '#733782', '#084DD2', '#0088FA']
+
+interface IGradients {
+  l2r: string // Left to right
+  r2l: string
+  t2b: string
+  b2t: string
+  raw: string[]
+}
+
+export const gradient: IGradients = {
+  raw: gradientList,
   l2r: `linear-gradient(
-    ${rgb(215, 70, 26)} 0%',
-    ${rgb(193, 39, 45)} 20%,
-    ${rgb(115, 55, 130)} 50%,
-    ${rgb(8, 77, 210)} 80%,
-    ${rgb(0, 136, 250)} 100%`,
+    ${gradientList[0]} 0%',
+    ${gradientList[1]} 20%,
+    ${gradientList[2]} 50%,
+    ${gradientList[3]} 80%,
+    ${gradientList[4]} 100%
+  )`,
   r2l: ``,
   t2b: ``,
   b2t: ``,

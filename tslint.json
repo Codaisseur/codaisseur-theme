@@ -24,7 +24,7 @@
     "interface-name": false,
     "no-submodule-imports": false,
     "one-variable-per-declaration": false,
-    "no-empty-interface": false,
+    "no-empty-interface": false, // normally true, but during development
     "no-unused-variable": [
       true, 
       {

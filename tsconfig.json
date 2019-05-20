@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "moduleResolution": "node",
-    "module": "commonjs",
+    "module": "esnext",
     "sourceMap": true,
     "rootDir": "src",
     "outDir": "build",
@@ -20,12 +20,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "preserve"
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "node_modules",
-  ],
+    "node_modules"
+  ]
 }
