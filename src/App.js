@@ -3,6 +3,8 @@ import React from "react";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline, Button, Typography, Grid, Container, Paper } from "@material-ui/core";
 
+import { Button as MuiButton } from '@material-ui/core'
+
 import theme from "./themes/default";
 
 const colors = ["primary", "secondary", "default", "inherit"];

@@ -14,6 +14,7 @@ import {
 
 import * as typography from './typography'
 import * as overrides from './overrides'
+import { withStyles } from '@material-ui/styles';
 
 // Typescript MUI does not like custom keys in their palette
 // We do, so with declare module we overwrite the interface in that file
