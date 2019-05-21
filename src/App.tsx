@@ -7,12 +7,10 @@ import {
   Grid,
   Container,
   Paper,
-  Button as MuiButton,
+  Button,
 } from '@material-ui/core'
 
 import theme from './themes/codaisseur'
-
-import { Button as StyledButton } from '.'
 
 const colors = ['primary', 'secondary', 'default', 'inherit']
 const variants = ['text', 'outlined', 'contained']
@@ -73,14 +71,9 @@ function App() {
                   </Grid>
                   {sizes.map((size: any, key2) => (
                     <Grid key={key2} item xs={3}>
-                      <StyledButton color={color} variant={variant} size={size}>
-                        {/* Custom button, incase things cannot be done within overrides */}
-                        {/* This means we need to use component imports from our package  */}
+                      <Button color={color} variant={variant} size={size}>
                         {size}
-                      </StyledButton>
-                      <MuiButton color={color} variant={variant} size={size}>
-                        {size}
-                      </MuiButton>
+                      </Button>
                     </Grid>
                   ))}
                 </>

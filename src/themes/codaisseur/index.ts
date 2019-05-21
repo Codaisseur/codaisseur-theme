@@ -14,8 +14,12 @@ const theme = createMuiTheme({
     ...overrides,
   },
 
+  shape: {
+    // The button component in MUI, it is taking its default radius from this object
+    borderRadius: 24,
+  },
+
   // Perhaps useful later.
-  // shape: {},
   // breakpoints: {},
   // mixins: {},
   // spacing: 0,

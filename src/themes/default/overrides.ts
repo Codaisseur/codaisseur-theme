@@ -1,35 +1,25 @@
 // Override of base components of MUI.
-export const BuiButtonBase = {
+// Using this instead of making our own custom components, we don't even need to modify our existing code base (except for using this theme provider)
+// Using root: {} you override every variant, outside of root you only modify the 'default' variant.
+
+export const MuiButtonBase = {
+  // node_modules/@material-ui/core/ButtonBase/ButtonBase.js
   root: {
-    boxShadow: 'none',
-    border: '10px solid black',
-    alignItems: 'right',
   },
 }
 
 export const MuiButton = {
+  // node_modules/@material-ui/core/Button/Button.js
   root: {
-    color: 'pink',
-    border: '1px dotted purple',
   },
-  // anything outside of root will be treated as the default variant.
-  text: {
-    // Name of the rule
-    color: 'yellow', // Some CSS
-  },
-  border: 0,
-  boxShadow: 'none',
 }
 
 export const MuiCard = {
   root: {
-    boxShadow: 'none',
   },
 }
 
 export const MuiPaper = {
   root: {
-    border: '5px solid black',
-    boxShadow: 'none',
   },
 }
