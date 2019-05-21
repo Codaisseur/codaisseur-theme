@@ -49,28 +49,25 @@ export const h5 = {
 
 export const h6 = {}
 
-export const subtitle1 = {
-  fontSize: px2pt(12),
-  fontWeight: 300,
-}
+export const subtitle1 = {}
 export const subtitle2 = {}
 
 export const body1 = {
   ...fontFamilyWithFallback('Popins'),
-  fontWeight: 400,
   fontSize: px2pt(16),
+  fontWeight: 400,
   lineHeight: '100%',
 }
 export const body2 = {
   ...fontFamilyWithFallback('Popins'),
-  fontWeight: 400,
   fontSize: px2pt(10),
+  fontWeight: 400,
   lineHeight: '100%',
 }
 
 export const button = {
   ...fontFamilyWithFallback('Popins'),
-  fontWeight: 700,
   fontSize: px2pt(16),
+  fontWeight: 700,
   lineHeight: '100%',
 }
