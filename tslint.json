@@ -25,6 +25,8 @@
     "no-submodule-imports": false,
     "one-variable-per-declaration": false,
     "no-empty-interface": false, // normally true, but during development
+    "jsx-no-multiline-js": false,
+    "jsx-boolean-value": false,
     "no-unused-variable": [
       true, 
       {

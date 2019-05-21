@@ -1,4 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+
 import {
   common,
   primary,
@@ -12,9 +13,8 @@ import {
   ITypeBackground,
 } from './colors'
 
-import * as typography from './typography'
-import * as overrides from './overrides'
-import { withStyles } from '@material-ui/styles';
+import * as defaultTypography from './typography'
+import * as defaultOverrides from './overrides'
 
 // Typescript MUI does not like custom keys in their palette
 // We do, so with declare module we overwrite the interface in that file
@@ -28,64 +28,51 @@ declare module '@material-ui/core/colors' {
   interface CommonColors extends ICommonColors {}
 }
 
-const theme = createMuiTheme({
-  palette: {
-    common,
-    background,
+export const palette = {
+  common,
+  background,
 
-    // extended palettes
-    primary: {
-      light: primary[200],
-      main: primary[500],
-      dark: primary[800],
-      contrastText: common.white,
-      ...primary,
-    },
-    secondary: {
-      light: secondary[200],
-      main: secondary[500],
-      dark: secondary[800],
-      contrastText: common.white,
-      ...secondary,
-    },
-    text: {},
-    error: {
-      light: error[200],
-      main: error[500],
-      dark: error[800],
-      contrastText: common.white,
-      ...error,
-    },
-    action: {},
-    // normal palette
-    grey,
+  // extended palettes
+  primary: {
+    light: primary[200],
+    main: primary[500],
+    dark: primary[800],
+    contrastText: common.white,
+    ...primary,
+  },
+  secondary: {
+    light: secondary[200],
+    main: secondary[500],
+    dark: secondary[800],
+    contrastText: common.white,
+    ...secondary,
+  },
+  text: {},
+  error: {
+    light: error[200],
+    main: error[500],
+    dark: error[800],
+    contrastText: common.white,
+    ...error,
+  },
+  action: {},
+  // normal palette
+  grey,
 
-    // custom
-    status,
-
-    // Perhaps useful later
-    // divider: undefined,
-    // tonalOffset: undefined,
-    // type: undefined,
-    // contrastThreshold: undefined,
-  },
-  typography: {
-    ...typography,
-  },
-  overrides: {
-    ...overrides,
-  },
+  // custom
+  status,
 
   // Perhaps useful later
-  // shape: {},
-  // breakpoints: {},
-  // mixins: {},
-  // spacing: 0,
-  // transitions: {},
-})
+  // divider: undefined,
+  // tonalOffset: undefined,
+  // type: undefined,
+  // contrastThreshold: undefined,
+}
 
-export default responsiveFontSizes(theme, {
-  breakpoints: ['sm', 'md', 'lg'],
-  disableAlign: true, // Going unitless!
-  factor: 2,
-})
+export const typography = {
+  ...defaultTypography,
+}
+
+export const overrides = {
+  ...defaultOverrides,
+}
