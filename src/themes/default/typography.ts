@@ -3,49 +3,48 @@ import { common } from './colors'
 
 const color = common.black
 
-const fontFamilyPopins = ['Popins', 'Helvetica Neue', 'Arial', 'sans-serif'].join(',')
-
-export const fontFamily = ['Roboto Mono', 'Helvetica Neue', 'Arial', 'sans-serif'].join(
-  ','
-)
+const fontDefaultFallback = 'Helvetica Neue, Arial, sans-serif'
+const fontFamilyWithFallback = (prefix?: string) => ({
+  fontFamily: prefix ? `${prefix}, ${fontDefaultFallback}` : fontDefaultFallback,
+})
 
 export const h1 = {
-  fontStyle: 'normal',
+  ...fontFamilyWithFallback('Roboto Slab'),
   fontSize: px2pt(60),
-  fontWeight: 500,
-  lineHeight: px2pt(60 / 8),
+  fontWeight: 400,
+  lineHeight: '100%',
   color,
 }
 
 export const h2 = {
-  fontStyle: 'normal',
+  ...fontFamilyWithFallback('Roboto Slab'),
   fontSize: px2pt(30),
-  fontWeight: 500,
-  lineHeight: px2pt(35),
+  fontWeight: 400,
+  lineHeight: '100%',
   color,
 }
 
 export const h3 = {
-  fontStyle: 'normal',
+  ...fontFamilyWithFallback('Roboto Mono'),
   fontSize: px2pt(22),
   fontWeight: 500,
-  lineHeight: px2pt(26),
+  lineHeight: '100%',
   color,
 }
 
 export const h4 = {
-  fontStyle: 'normal',
+  ...fontFamilyWithFallback('Roboto Mono'),
   fontSize: px2pt(14),
   fontWeight: 400,
-  lineHeight: px2pt(16),
+  lineHeight: '100%',
   color,
 }
 
 export const h5 = {
-  fontFamily: fontFamilyPopins,
+  ...fontFamilyWithFallback('Popins'),
   fontSize: px2pt(18),
   fontWeight: 600,
-  lineHeight: px2pt(27),
+  lineHeight: '100%',
 }
 
 export const h6 = {}
@@ -56,13 +55,22 @@ export const subtitle1 = {
 }
 export const subtitle2 = {}
 
-export const body1 = {}
-export const body2 = {
-  fontFamily: fontFamilyPopins,
-  fontSize: px2pt(14),
+export const body1 = {
+  ...fontFamilyWithFallback('Popins'),
   fontWeight: 400,
+  fontSize: px2pt(16),
+  lineHeight: '100%',
+}
+export const body2 = {
+  ...fontFamilyWithFallback('Popins'),
+  fontWeight: 400,
+  fontSize: px2pt(10),
+  lineHeight: '100%',
 }
 
 export const button = {
-  fontFamily: fontFamilyPopins,
+  ...fontFamilyWithFallback('Popins'),
+  fontWeight: 700,
+  fontSize: px2pt(16),
+  lineHeight: '100%',
 }

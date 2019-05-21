@@ -1,5 +1,3 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
-
 import {
   common,
   primary,
