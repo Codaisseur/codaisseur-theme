@@ -4,22 +4,18 @@
 
 export const MuiButtonBase = {
   // node_modules/@material-ui/core/ButtonBase/ButtonBase.js
-  root: {
-  },
+  root: {},
 }
 
 export const MuiButton = {
   // node_modules/@material-ui/core/Button/Button.js
-  root: {
-  },
+  root: {},
 }
 
 export const MuiCard = {
-  root: {
-  },
+  root: {},
 }
 
 export const MuiPaper = {
-  root: {
-  },
+  root: {},
 }

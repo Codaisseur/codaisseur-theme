@@ -3,7 +3,7 @@ import { Button as MuiButton } from '@material-ui/core'
 
 import { palette, typography, overrides } from '../default'
 
-const theme = createMuiTheme({
+export const theme = {
   palette: {
     ...palette,
   },
@@ -24,9 +24,9 @@ const theme = createMuiTheme({
   // mixins: {},
   // spacing: 0,
   // transitions: {},
-})
+}
 
-export default responsiveFontSizes(theme, {
+export default responsiveFontSizes(createMuiTheme(theme), {
   breakpoints: ['sm', 'md', 'lg'],
   disableAlign: true, // Going unitless!
   factor: 2,
