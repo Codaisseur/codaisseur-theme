@@ -19,7 +19,7 @@ export interface ITypeBackground extends Partial<TypeBackground> {
 }
 
 // Crystal Responses
-interface IStatusColors {
+export interface IStatusColors {
   warning: string
   error: string
   info: string

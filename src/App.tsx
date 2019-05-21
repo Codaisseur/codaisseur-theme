@@ -1,7 +1,14 @@
 import React from 'react'
 
 import { ThemeProvider } from './index'
-import { CssBaseline, Typography, Grid, Container, Paper } from '@material-ui/core'
+import {
+  CssBaseline,
+  Typography,
+  Grid,
+  Container,
+  Paper,
+  Button as MuiButton,
+} from '@material-ui/core'
 
 import theme from './themes/codaisseur'
 
@@ -67,8 +74,13 @@ function App() {
                   {sizes.map((size: any, key2) => (
                     <Grid key={key2} item xs={3}>
                       <StyledButton color={color} variant={variant} size={size}>
+                        {/* Custom button, incase things cannot be done within overrides */}
+                        {/* This means we need to use component imports from our package  */}
                         {size}
                       </StyledButton>
+                      <MuiButton color={color} variant={variant} size={size}>
+                        {size}
+                      </MuiButton>
                     </Grid>
                   ))}
                 </>
@@ -78,7 +90,7 @@ function App() {
         </Paper>
       </Container>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
