@@ -1,5 +1,3 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
-
 import {
   common,
   primary,
@@ -60,7 +58,7 @@ export const palette = {
   grey,
 
   // custom
-  status,
+  status, // crystal error codes colors
 
   // Perhaps useful later
   // divider: undefined,

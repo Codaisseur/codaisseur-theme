@@ -27,7 +27,7 @@ export const theme = {
 }
 
 export default responsiveFontSizes(createMuiTheme(theme), {
-  breakpoints: ['sm', 'md', 'lg'],
+  breakpoints: ['xs', 'sm', 'md', 'lg', 'xl'],
   disableAlign: true, // Going unitless!
   factor: 2,
 })
