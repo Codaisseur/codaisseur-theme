@@ -8,7 +8,7 @@ const fontFamilyWithFallback = (prefix?: string) => ({
   fontFamily: prefix ? `${prefix}, ${fontDefaultFallback}` : fontDefaultFallback,
 })
 
-const fontFamily = fontFamilyWithFallback('Popins').fontFamily
+const fontFamily = fontFamilyWithFallback('Poppins').fontFamily
 
 export const h1 = {
   ...fontFamilyWithFallback('Roboto Slab'),
