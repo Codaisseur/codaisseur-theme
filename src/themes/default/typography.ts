@@ -8,6 +8,8 @@ const fontFamilyWithFallback = (prefix?: string) => ({
   fontFamily: prefix ? `${prefix}, ${fontDefaultFallback}` : fontDefaultFallback,
 })
 
+const fontFamily = fontFamilyWithFallback('Popins').fontFamily
+
 export const h1 = {
   ...fontFamilyWithFallback('Roboto Slab'),
   fontSize: px2pt(60),
@@ -41,7 +43,7 @@ export const h4 = {
 }
 
 export const h5 = {
-  ...fontFamilyWithFallback('Popins'),
+  fontFamily,
   fontSize: px2pt(18),
   fontWeight: 600,
   lineHeight: '100%',
@@ -53,20 +55,20 @@ export const subtitle1 = {}
 export const subtitle2 = {}
 
 export const body1 = {
-  ...fontFamilyWithFallback('Popins'),
+  fontFamily,
   fontSize: px2pt(16),
   fontWeight: 400,
   lineHeight: '100%',
 }
 export const body2 = {
-  ...fontFamilyWithFallback('Popins'),
+  fontFamily,
   fontSize: px2pt(10),
   fontWeight: 400,
   lineHeight: '100%',
 }
 
 export const button = {
-  ...fontFamilyWithFallback('Popins'),
+  fontFamily,
   fontSize: px2pt(16),
   fontWeight: 700,
   lineHeight: '100%',

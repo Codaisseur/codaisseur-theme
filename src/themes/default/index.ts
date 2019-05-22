@@ -58,7 +58,7 @@ export const palette = {
   grey,
 
   // custom
-  status,
+  status, // crystal error codes colors
 
   // Perhaps useful later
   // divider: undefined,

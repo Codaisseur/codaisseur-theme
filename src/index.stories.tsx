@@ -3,9 +3,6 @@ import { storiesOf } from '@storybook/react'
 
 import { Button, Typography } from '@material-ui/core'
 
-const colors = ['primary', 'secondary', 'default', 'inherit']
-const sizes = ['small', 'medium', 'large']
-
 const genButtons = (color: any) =>
   ['text', 'outlined', 'contained', 'default'].map((variant: any, key) => (
     <div key={key}>
@@ -57,4 +54,3 @@ storiesOf('Override Typography', module)
   .add('TextPrimary', () => genTypographys('textPrimary'))
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
-
