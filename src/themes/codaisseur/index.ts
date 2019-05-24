@@ -2,7 +2,6 @@ import { createMuiTheme, responsiveFontSizes, withStyles } from '@material-ui/co
 import { Button as MuiButton } from '@material-ui/core'
 import { TextField as MuiTextField } from '@material-ui/core'
 
-
 import { palette, typography, overrides } from '../default'
 
 export const theme = {

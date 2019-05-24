@@ -1,4 +1,4 @@
-import { NONAME } from "dns";
+import { NONAME } from 'dns'
 
 // Override of base components of MUI.
 // Using this instead of making our own custom components, we don't even need to modify our existing code base (except for using this theme provider)
@@ -6,8 +6,7 @@ import { NONAME } from "dns";
 
 export const MuiButtonBase = {
   // node_modules/@material-ui/core/ButtonBase/ButtonBase.js
-  root: {
-  },
+  root: {},
 }
 
 export const MuiButton = {
@@ -15,11 +14,11 @@ export const MuiButton = {
   root: {
     borderRadius: 24,
     boxShadow: 'none',
-    color: 'green'
+    color: 'green',
   },
   contained: {
     boxShadow: 'none',
-  }
+  },
 }
 
 export const MuiCard = {
