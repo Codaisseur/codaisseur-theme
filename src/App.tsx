@@ -8,11 +8,14 @@ import {
   Container,
   Paper,
   Button,
+  TextField,
+  Checkbox,
 } from '@material-ui/core'
 
 import theme from './themes/codaisseur'
 
 const colors = ['primary', 'secondary', 'default', 'inherit']
+const checkboxes = ['default', 'checked', 'disabled']
 const variants = ['text', 'outlined', 'contained']
 const sizes = ['small', 'medium', 'large']
 
@@ -59,7 +62,6 @@ function App() {
           {colors.map((color: any, key) => (
             <Grid key={key} container alignItems="flex-end">
               <Grid item xs={12}>
-                {console.log(color)}
                 <Typography color={color} variant="h3">
                   {color}
                 </Typography>

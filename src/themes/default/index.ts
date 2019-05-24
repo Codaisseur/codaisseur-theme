@@ -7,6 +7,7 @@ import {
   grey,
   error,
   status,
+  gradient,
   background,
   IPaletteOptions,
   ICommonColors,
@@ -58,6 +59,7 @@ export const palette = {
   action: {},
   // normal palette
   grey,
+  gradient,
 
   // custom
   status,

@@ -1,5 +1,7 @@
 import { createMuiTheme, responsiveFontSizes, withStyles } from '@material-ui/core/styles'
 import { Button as MuiButton } from '@material-ui/core'
+import { TextField as MuiTextField } from '@material-ui/core'
+
 
 import { palette, typography, overrides } from '../default'
 
@@ -16,7 +18,7 @@ export const theme = {
 
   shape: {
     // The button component in MUI, it is taking its default radius from this object
-    borderRadius: 24,
+    // borderRadius: 24,
   },
 
   // Perhaps useful later.
@@ -34,10 +36,13 @@ export default responsiveFontSizes(createMuiTheme(theme), {
 
 // Create custom component
 export const Button = withStyles({
-  root: {
-    borderRadius: 40,
-  },
+  root: {},
   label: {
     textTransform: 'capitalize',
   },
+})(MuiButton)
+
+export const TextField = withStyles({
+  root: {},
+  label: {},
 })(MuiButton)

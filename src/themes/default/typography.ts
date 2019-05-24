@@ -3,7 +3,7 @@ import { common } from './colors'
 
 const color = common.black
 
-const fontFamilyPopins = ['Popins', 'Helvetica Neue', 'Arial', 'sans-serif'].join(',')
+const fontFamilyPoppins = ['Poppins', 'Helvetica Neue', 'Arial', 'sans-serif'].join(',')
 
 export const fontFamily = ['Roboto Mono', 'Helvetica Neue', 'Arial', 'sans-serif'].join(
   ','
@@ -42,7 +42,7 @@ export const h4 = {
 }
 
 export const h5 = {
-  fontFamily: fontFamilyPopins,
+  fontFamily: fontFamilyPoppins,
   fontSize: px2pt(18),
   fontWeight: 600,
   lineHeight: px2pt(27),
@@ -56,13 +56,16 @@ export const subtitle1 = {
 }
 export const subtitle2 = {}
 
-export const body1 = {}
+export const body1 = {
+  fontFamily: fontFamilyPoppins,
+  fontSize: '1rem',
+}
 export const body2 = {
-  fontFamily: fontFamilyPopins,
+  fontFamily: fontFamilyPoppins,
   fontSize: px2pt(14),
   fontWeight: 400,
 }
 
 export const button = {
-  fontFamily: fontFamilyPopins,
+  fontFamily: fontFamilyPoppins,
 }

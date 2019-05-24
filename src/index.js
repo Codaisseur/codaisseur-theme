@@ -21,6 +21,8 @@ export const ThemeProvider = (props) => (
 )
 
 export const Button = theme.Button
+export const TextField = theme.TextField
+
 
 // <RemoveLater>
 ReactDOM.render(<App />, document.getElementById('root'))
