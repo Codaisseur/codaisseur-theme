@@ -2,11 +2,18 @@
   "name": "@codaisseur/theme",
   "version": "0.1.1",
   "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^4.0.0-rc.0",
     "react": "^16.8.6"
   },
   "scripts": {
+    "build": "tsc -p .",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
     "storybook": "start-storybook"
@@ -30,6 +37,13 @@
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^4.0.0",
     "typescript": "^3.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Codaisseur/codaisseur-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Codaisseur/codaisseur-theme/issues"
   },
   "husky": {
     "hooks": {
