@@ -1,6 +1,6 @@
 {
   "name": "@codaisseur/theme",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,8 @@
     "build": "tsc -p .",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "publish": "npm publish --access public"
   },
   "eslintConfig": {
     "extends": "react-app"
