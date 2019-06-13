@@ -10,10 +10,11 @@ export const MuiButtonBase = {
 export const MuiButton = {
   // node_modules/@material-ui/core/Button/Button.js
   root: {
-    paddingTop: 16,
-    paddingBottom: 16,
-    paddingLeft: 25,
-    paddingRight: 25,
+    borderRadius: '2rem',
+    paddingTop: '0.8vw',
+    paddingBottom: '0.8vw',
+    paddingLeft: '1.2vw',
+    paddingRight: '1.2vw',
   },
 }
 
