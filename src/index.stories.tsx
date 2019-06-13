@@ -2,6 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Button, Typography } from '@material-ui/core'
+import { Logo } from './images/icons/Codaisseur'
+import { Menu, MenuClose } from './images/icons/Menu'
 
 const genButtons = (color: any) => {
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
@@ -14,7 +16,25 @@ const genButtons = (color: any) => {
       </Button>
     </div>
   ))
-}
+
+const genLogo = () => (
+  <div style={{ border: '1px solid black' }}>
+    <Logo />
+  </div>
+)
+
+const genMenu = () => (
+  <div>
+    <Menu />
+  </div>
+)
+
+const genMenuClose = () => (
+  <div>
+    <MenuClose />
+  </div>
+)
+
 const genTypographys = (color: any) =>
   [
     'h1',
@@ -54,3 +74,8 @@ storiesOf('Override Typography', module)
   .add('TextPrimary', () => genTypographys('textPrimary'))
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
+
+storiesOf('Images', module)
+  .add('Logo', () => genLogo())
+  .add('Menu', () => genMenu())
+  .add('MenuClose', () => genMenuClose())
