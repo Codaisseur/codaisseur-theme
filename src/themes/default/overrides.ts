@@ -9,7 +9,12 @@ export const MuiButtonBase = {
 
 export const MuiButton = {
   // node_modules/@material-ui/core/Button/Button.js
-  root: {},
+  root: {
+    paddingTop: 16,
+    paddingBottom: 16,
+    paddingLeft: 25,
+    paddingRight: 25,
+  },
 }
 
 export const MuiCard = {

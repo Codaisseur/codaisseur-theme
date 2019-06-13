@@ -1,5 +1,4 @@
-import { px2pt } from '../../lib'
-import { common } from './colors'
+import { common, primary } from './colors'
 
 const color = common.black
 
@@ -12,64 +11,68 @@ const fontFamily = fontFamilyWithFallback('Poppins').fontFamily
 
 export const h1 = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: px2pt(60),
-  fontWeight: 400,
-  lineHeight: '100%',
+  fontSize: 68,
+  fontWeight: 800,
+  lineHeight: 90 / 68,
   color,
 }
 
 export const h2 = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: px2pt(30),
+  fontSize: 60,
   fontWeight: 400,
-  lineHeight: '100%',
+  lineHeight: 63 / 60,
   color,
 }
 
 export const h3 = {
-  ...fontFamilyWithFallback('Roboto Mono'),
-  fontSize: px2pt(22),
-  fontWeight: 500,
-  lineHeight: '100%',
+  ...fontFamilyWithFallback('Roboto Slab'),
+  fontSize: 34,
+  fontWeight: 600,
+  lineHeight: 45 / 34,
   color,
 }
 
 export const h4 = {
-  ...fontFamilyWithFallback('Roboto Mono'),
-  fontSize: px2pt(14),
+  ...fontFamilyWithFallback('Roboto Slab'),
+  fontSize: 34,
   fontWeight: 400,
-  lineHeight: '100%',
+  lineHeight: 45 / 34,
+  color,
+}
+export const h5 = { ...h4 }
+export const h6 = { ...h5 }
+
+export const subtitle1 = {
+  ...fontFamilyWithFallback('Poppins'),
+  fontSize: 16,
+  fontWeight: 400,
+  lineHeight: 24 / 16,
+  color: primary[500],
+}
+
+export const subtitle2 = {
+  ...subtitle1,
   color,
 }
 
-export const h5 = {
-  fontFamily,
-  fontSize: px2pt(18),
-  fontWeight: 600,
-  lineHeight: '100%',
-}
-
-export const h6 = {}
-
-export const subtitle1 = {}
-export const subtitle2 = {}
-
 export const body1 = {
   fontFamily,
-  fontSize: px2pt(16),
+  fontSize: 16,
   fontWeight: 400,
-  lineHeight: '100%',
+  lineHeight: 28 / 16,
 }
 export const body2 = {
   fontFamily,
-  fontSize: px2pt(10),
+  fontSize: 18,
   fontWeight: 400,
-  lineHeight: '100%',
+  lineHeight: 32 / 18,
 }
 
 export const button = {
   fontFamily,
-  fontSize: px2pt(16),
-  fontWeight: 700,
-  lineHeight: '100%',
+  fontSize: 16,
+  fontWeight: 600,
+  lineHeight: 21 / 16,
+  letterSpacing: 1.25,
 }

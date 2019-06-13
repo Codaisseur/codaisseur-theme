@@ -1325,7 +1325,7 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@storybook/addons@5.1.4":
+"@storybook/addons@5.1.4", "@storybook/addons@^5.1.4":
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.1.4.tgz#65cbbccb6bb8d58419e61c4ae97891e8af713c01"
   integrity sha512-JtMTgksgq/r/k/wP9vxaL45xgwYPMqQG/KHEikNy98v83KlK+2QK+MuSO01Nf3ab1Mub+3Q9EDZk7+TcJNriUQ==
