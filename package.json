@@ -17,6 +17,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
     "storybook": "start-storybook",
+    "prepublish": "yarn build",
     "publish": "npm publish --access public",
     "test": "start-storybook --ci --smoke-test"
   },
