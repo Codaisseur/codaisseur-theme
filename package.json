@@ -17,7 +17,8 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
     "storybook": "start-storybook",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "test": "start-storybook --ci --smoke-test"
   },
   "eslintConfig": {
     "extends": "react-app"
