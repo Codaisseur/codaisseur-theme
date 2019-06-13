@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react'
 
 import { Button, Typography } from '@material-ui/core'
 
-const genButtons = (color: any) =>
-  ['text', 'outlined', 'contained', 'default'].map((variant: any, key) => (
+const genButtons = (color: any) => {
+  return ['text', 'outlined', 'contained'].map((variant: any, key) => (
     <div key={key}>
       <Button variant={variant} color={color}>
         {variant}
@@ -14,7 +14,7 @@ const genButtons = (color: any) =>
       </Button>
     </div>
   ))
-
+}
 const genTypographys = (color: any) =>
   [
     'h1',
