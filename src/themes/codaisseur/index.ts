@@ -34,9 +34,6 @@ export default responsiveFontSizes(createMuiTheme(theme), {
 
 // Create custom component
 export const Button = withStyles({
-  root: {
-    borderRadius: 40,
-  },
   label: {
     textTransform: 'capitalize',
   },

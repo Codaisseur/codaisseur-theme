@@ -11,31 +11,31 @@ const fontFamily = fontFamilyWithFallback('Poppins').fontFamily
 
 export const h1 = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: 68,
-  fontWeight: 800,
+  fontSize: '5.9vw',
+  fontWeight: 500,
   lineHeight: 90 / 68,
   color,
 }
 
 export const h2 = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: 60,
-  fontWeight: 400,
+  fontSize: '4.2vw',
+  fontWeight: 500,
   lineHeight: 63 / 60,
   color,
 }
 
 export const h3 = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: 34,
-  fontWeight: 600,
+  fontSize: '2.8vw',
+  fontWeight: 400,
   lineHeight: 45 / 34,
   color,
 }
 
 export const h4 = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: 34,
+  fontSize: '2.6vw',
   fontWeight: 400,
   lineHeight: 45 / 34,
   color,
@@ -45,7 +45,7 @@ export const h6 = { ...h5 }
 
 export const subtitle1 = {
   ...fontFamilyWithFallback('Poppins'),
-  fontSize: 16,
+  fontSize: '2.4vw',
   fontWeight: 400,
   lineHeight: 24 / 16,
   color: primary[500],
@@ -58,21 +58,31 @@ export const subtitle2 = {
 
 export const body1 = {
   fontFamily,
-  fontSize: 16,
+  fontSize: '2.4vmin',
   fontWeight: 400,
   lineHeight: 28 / 16,
 }
 export const body2 = {
   fontFamily,
-  fontSize: 18,
+  fontSize: '2.8vmin',
   fontWeight: 400,
   lineHeight: 32 / 18,
 }
 
 export const button = {
   fontFamily,
-  fontSize: 16,
+  fontSize: '2.8vmin',
   fontWeight: 600,
   lineHeight: 21 / 16,
   letterSpacing: 1.25,
+}
+
+export const caption = {
+  ...body2,
+  fontWeight: 800,
+}
+
+export const overline = {
+  ...body2,
+  textTransform: 'uppercase',
 }
