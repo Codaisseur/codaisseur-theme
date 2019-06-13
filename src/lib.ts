@@ -1,7 +1,7 @@
 import { createGenerateClassName } from '@material-ui/styles'
 import { StylesOptions } from '@material-ui/styles/StylesProvider'
 import { SheetsRegistry } from 'jss'
-import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClassName';
+import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClassName'
 
 /**
  * Convert Pixel to Point (spacing unit)
