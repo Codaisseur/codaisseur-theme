@@ -1,21 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { makeStyles } from "@material-ui/styles";
 import { Button, Typography } from '@material-ui/core'
 
-const useButtonStyles = makeStyles(({ spacing }) => ({
-  root: {
-    margin: spacing(2),
-  },
-}))
-
 const genButtons = (color: any) => {
-  const classes = useButtonStyles()
-
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
     <div key={key}>
-      <Button classes variant={variant} color={color}>
+      <Button variant={variant} color={color}>
         {variant}
       </Button>
       <Button variant={variant} color={color} disabled>
