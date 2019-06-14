@@ -1,7 +1,13 @@
-import { createGenerateClassName } from '@material-ui/styles'
+import { createGenerateClassName, jssPreset } from '@material-ui/styles'
 import { StylesOptions } from '@material-ui/styles/StylesProvider'
-import { SheetsRegistry } from 'jss'
+import { create, SheetsRegistry } from 'jss'
 import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClassName'
+
+const extend = require('jss-extend')
+
+const jss = create({
+  plugins: [...jssPreset().plugins, extend()],
+})
 
 /**
  * Convert Pixel to Point (spacing unit)
@@ -27,6 +33,7 @@ export const createPageContext = (
   options?: StylesOptions,
   classNameOptions?: GenerateClassNameOptions
 ): StylesOptions => ({
+  jss,
   sheetsManager: new Map(),
   sheetsRegistry: new SheetsRegistry(),
   generateClassName: createGenerateClassName({ ...classNameOptions }),

@@ -12,6 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^4.1.1",
+    "jss": "^10.0.0-alpha.17",
+    "jss-extend": "^6.2.0",
     "react": "^16.8.6"
   },
   "scripts": {
@@ -19,8 +21,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
     "storybook": "start-storybook",
-    "test": "start-storybook --ci --smoke-test",
-    "prepare": "npm run build"
+    "test": "start-storybook --ci --smoke-test"
   },
   "eslintConfig": {
     "extends": "react-app"
