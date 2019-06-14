@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { Button, Typography } from '@material-ui/core'
 import { Logo } from './images/icons/Codaisseur'
 import { Menu, MenuClose } from './images/icons/Menu'
+import { Arrow, ArrowDisabled } from './images/icons/Arrow'
 
 const genButtons = (color: any) => {
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
@@ -18,7 +19,7 @@ const genButtons = (color: any) => {
   ))
 
 const genLogo = () => (
-  <div style={{ border: '1px solid black' }}>
+  <div>
     <Logo />
   </div>
 )
@@ -32,6 +33,13 @@ const genMenu = () => (
 const genMenuClose = () => (
   <div>
     <MenuClose />
+  </div>
+)
+
+const genArrow = () => (
+  <div>
+    <Arrow />
+    <ArrowDisabled />
   </div>
 )
 
@@ -75,7 +83,9 @@ storiesOf('Override Typography', module)
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
 
-storiesOf('Images', module)
+storiesOf('Icons', module)
   .add('Logo', () => genLogo())
   .add('Menu', () => genMenu())
   .add('MenuClose', () => genMenuClose())
+  .add('Arrow', () => genArrow())
+  .add('ArrowDisabled', () => genArrow())
