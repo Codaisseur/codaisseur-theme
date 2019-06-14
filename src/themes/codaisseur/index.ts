@@ -1,4 +1,4 @@
-import { createMuiTheme, responsiveFontSizes, withStyles } from '@material-ui/core/styles'
+import { createMuiTheme, withStyles } from '@material-ui/core/styles'
 import { Button as MuiButton } from '@material-ui/core'
 
 import { palette, typography, overrides } from '../default'
@@ -26,11 +26,7 @@ export const theme = {
   // transitions: {},
 }
 
-export default responsiveFontSizes(createMuiTheme(theme), {
-  breakpoints: ['xs', 'sm', 'md', 'lg', 'xl'],
-  disableAlign: true, // Going unitless!
-  factor: 2,
-})
+export default createMuiTheme(theme)
 
 // Create custom component
 export const Button = withStyles({

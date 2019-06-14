@@ -36,7 +36,7 @@ export const h3: TypographyStyleOptions = {
 
 export const h4: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: '2.6vw',
+  fontSize: '2.4vw',
   fontWeight: 400,
   lineHeight: 45 / 34,
   color,
@@ -46,7 +46,7 @@ export const h6 = { ...h5 }
 
 export const subtitle1: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Poppins'),
-  fontSize: '2.4vw',
+  fontSize: '2.2vw',
   fontWeight: 400,
   lineHeight: 24 / 16,
   color: primary[500],
@@ -59,20 +59,20 @@ export const subtitle2: TypographyStyleOptions = {
 
 export const body1: TypographyStyleOptions = {
   fontFamily,
-  fontSize: '2.4vmin',
+  fontSize: '2vmin',
   fontWeight: 400,
   lineHeight: 28 / 16,
 }
 export const body2: TypographyStyleOptions = {
   fontFamily,
-  fontSize: '2.8vmin',
+  fontSize: '2.2vmin',
   fontWeight: 400,
   lineHeight: 32 / 18,
 }
 
 export const button: TypographyStyleOptions = {
   fontFamily,
-  fontSize: '2.8vmin',
+  fontSize: '2vmin',
   fontWeight: 600,
   lineHeight: 21 / 16,
   letterSpacing: 1.25,
