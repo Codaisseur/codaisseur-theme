@@ -6,8 +6,8 @@ export const Arrow = (props: SvgIconProps) => (
     width="45"
     height="45"
     viewBox="0 0 45 45"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    color="secondary"
     {...props}
   >
     <path
@@ -16,6 +16,7 @@ export const Arrow = (props: SvgIconProps) => (
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
+      fill="none"
     />
     <path
       d="M22.5 30L30 22.5L22.5 15"
@@ -23,6 +24,7 @@ export const Arrow = (props: SvgIconProps) => (
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
+      fill="none"
     />
     <path
       d="M15 22.5001L30 22.5001"
@@ -30,6 +32,7 @@ export const Arrow = (props: SvgIconProps) => (
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
+      fill="none"
     />
   </SvgIcon>
 )
@@ -39,6 +42,7 @@ export const ArrowDisabled = (props: SvgIconProps) => (
     width="45"
     height="45"
     viewBox="0 0 45 45"
+    color="disabled"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
@@ -49,6 +53,7 @@ export const ArrowDisabled = (props: SvgIconProps) => (
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
+      fill="none"
     />
     <path
       d="M22.5 15L15 22.5L22.5 30"
@@ -56,6 +61,7 @@ export const ArrowDisabled = (props: SvgIconProps) => (
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
+      fill="none"
     />
     <path
       d="M30 22.4999L15 22.4999"
@@ -63,6 +69,7 @@ export const ArrowDisabled = (props: SvgIconProps) => (
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
+      fill="none"
     />
   </SvgIcon>
 )

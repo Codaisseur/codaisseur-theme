@@ -78,12 +78,12 @@ export const button: TypographyStyleOptions = {
   letterSpacing: 1.25,
 }
 
-export const caption: TypographyStyleOptions = {
+export const caption = {
   ...body2,
   fontWeight: 800,
 }
 
-export const overline: TypographyStyleOptions = {
+export const overline = {
   ...body2,
-  textTransform: 'uppercase',
+  // textTransform: 'uppercase',
 }

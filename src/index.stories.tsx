@@ -17,6 +17,7 @@ const genButtons = (color: any) => {
       </Button>
     </div>
   ))
+}
 
 const genLogo = () => (
   <div>
@@ -88,4 +89,3 @@ storiesOf('Icons', module)
   .add('Menu', () => genMenu())
   .add('MenuClose', () => genMenuClose())
   .add('Arrow', () => genArrow())
-  .add('ArrowDisabled', () => genArrow())
