@@ -1,11 +1,13 @@
 {
   "name": "@codaisseur/theme",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "./dist"
+    "dist",
+    "dist/*.js",
+    "dist/**/*.js"
   ],
   "license": "MIT",
   "dependencies": {
@@ -17,9 +19,8 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
     "storybook": "start-storybook",
-    "prepublish": "yarn build",
-    "publish": "npm publish --access public",
-    "test": "start-storybook --ci --smoke-test"
+    "test": "start-storybook --ci --smoke-test",
+    "prepare": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
