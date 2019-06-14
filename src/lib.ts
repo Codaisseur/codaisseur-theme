@@ -2,11 +2,10 @@ import { createGenerateClassName, jssPreset } from '@material-ui/styles'
 import { StylesOptions } from '@material-ui/styles/StylesProvider'
 import { create, SheetsRegistry } from 'jss'
 import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClassName'
-
-const extend = require('jss-extend')
+import jssExtend from 'jss-plugin-extend'
 
 const jss = create({
-  plugins: [...jssPreset().plugins, extend()],
+  plugins: [...jssPreset().plugins, jssExtend()],
 })
 
 /**
