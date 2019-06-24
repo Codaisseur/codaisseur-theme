@@ -4,7 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { Button, Typography } from '@material-ui/core'
 import { Logo } from './images/icons/Codaisseur'
 import { Menu, MenuClose } from './images/icons/Menu'
-import { Arrow, ArrowDisabled } from './images/icons/Arrow'
+import { ArrowButton } from './themes/codaisseur'
+import { Luggage } from './images/humans/Luggage'
 
 const genButtons = (color: any) => {
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
@@ -39,8 +40,14 @@ const genMenuClose = () => (
 
 const genArrow = () => (
   <div>
-    <Arrow />
-    <ArrowDisabled />
+    <ArrowButton rotate={0.3} direction="right" />
+    <ArrowButton disabled />
+  </div>
+)
+
+const genHumans = () => (
+  <div>
+    <Luggage />
   </div>
 )
 
@@ -89,3 +96,5 @@ storiesOf('Icons', module)
   .add('Menu', () => genMenu())
   .add('MenuClose', () => genMenuClose())
   .add('Arrow', () => genArrow())
+
+storiesOf('Images', module).add('Humans Luggage', () => genHumans())
