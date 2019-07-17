@@ -35,5 +35,6 @@ export const Button = withStyles({
   },
   root: {
     boxShadow: 'none',
+    disableRipple: 'true',
   },
 })(MuiButton)

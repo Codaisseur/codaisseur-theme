@@ -30,7 +30,6 @@ const genTypographys = (color: any) =>
     'caption',
     'button',
     'overline',
-    // 'srOnly',
     'inherit',
   ].map((variant: any, key) => (
     <div key={key}>

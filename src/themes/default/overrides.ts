@@ -11,16 +11,19 @@ export const MuiButton = {
   // node_modules/@material-ui/core/Button/Button.js
   root: {
     borderRadius: '2rem',
-    paddingTop: '0.5vw',
-    paddingBottom: '0.5vw',
-    paddingLeft: '0.8vw',
-    paddingRight: '0.8vw',
-    disableRipple: true,
-    boxShadow: 'none',
+    padding: '14px 22px',
   },
   contained: {
     boxShadow: '4px 0px 2px rgba(0, 0, 0, 0.05)',
-    disableRipple: true,
+  },
+  outlined: {
+    padding: '14px 22px',
+  },
+  text: {
+    padding: '14px 22px',
+  },
+  ['&:disabled']: {
+    color: 'green',
   },
 }
 
@@ -30,4 +33,10 @@ export const MuiCard = {
 
 export const MuiPaper = {
   root: {},
+}
+
+export const MuiTouchRipple = {
+  root: {
+    display: 'none',
+  },
 }
