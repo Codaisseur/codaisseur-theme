@@ -14,8 +14,6 @@ import {
 import * as defaultTypography from './typography'
 import * as defaultOverrides from './overrides'
 
-export { theme } from '../codaisseur/index'
-
 // Typescript MUI does not like custom keys in their palette
 // We do, so with declare module we overwrite the interface in that file
 // We're extending the original interface keeping compatibility
