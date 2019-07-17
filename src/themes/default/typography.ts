@@ -61,7 +61,7 @@ export const h6: TypographyStyleOptions = {
 }
 
 export const subtitle1: TypographyStyleOptions = {
-  ...fontFamilyWithFallback('Poppins'),
+  fontFamily,
   fontSize: '16px',
   fontWeight: 400 || 'normal',
   lineHeight: 24 / 16,
@@ -70,7 +70,7 @@ export const subtitle1: TypographyStyleOptions = {
 }
 
 export const subtitle2: TypographyStyleOptions = {
-  ...fontFamilyWithFallback('Poppins'),
+  fontFamily,
   fontSize: '14px',
   fontWeight: 400 || 'normal',
   lineHeight: 24 / 14,
