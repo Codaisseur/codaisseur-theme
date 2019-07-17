@@ -15,6 +15,12 @@ export const MuiButton = {
     paddingBottom: '0.5vw',
     paddingLeft: '0.8vw',
     paddingRight: '0.8vw',
+    disableRipple: true,
+    boxShadow: 'none',
+  },
+  contained: {
+    boxShadow: '4px 0px 2px rgba(0, 0, 0, 0.05)',
+    disableRipple: true,
   },
 }
 

@@ -33,4 +33,7 @@ export const Button = withStyles({
   label: {
     textTransform: 'capitalize',
   },
+  root: {
+    boxShadow: 'none',
+  },
 })(MuiButton)
