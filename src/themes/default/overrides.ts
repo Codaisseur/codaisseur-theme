@@ -22,9 +22,6 @@ export const MuiButton = {
   text: {
     padding: '14px 22px',
   },
-  ['&:disabled']: {
-    color: 'green',
-  },
 }
 
 export const MuiCard = {

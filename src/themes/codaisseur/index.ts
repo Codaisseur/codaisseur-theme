@@ -33,8 +33,4 @@ export const Button = withStyles({
   label: {
     textTransform: 'capitalize',
   },
-  root: {
-    boxShadow: 'none',
-    disableRipple: 'true',
-  },
 })(MuiButton)
