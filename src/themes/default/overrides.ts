@@ -12,8 +12,8 @@ export const MuiButton = {
   root: {
     borderRadius: '2rem',
     padding: '14px 22px',
-    disableFocusRipple: true,
-    disableRipple: 'true',
+    // disableFocusRipple: true,
+    // disableRipple: 'true',
   },
   contained: {
     boxShadow: '4px 0px 2px rgba(0, 0, 0, 0.05)',
@@ -22,6 +22,9 @@ export const MuiButton = {
   },
   outlined: {
     padding: '14px 22px',
+    '&:hover': {
+      background: 'none',
+    },
   },
   text: {
     padding: '14px 22px',
@@ -37,7 +40,6 @@ export const MuiCard = {
   root: {
     boxShadow: '4px 0px 40px rgba(0, 0, 0, 0.25)',
     borderRadius: '8px',
-    disableRipple: 'true',
   },
 }
 
