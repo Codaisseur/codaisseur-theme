@@ -2,7 +2,6 @@ import React from 'react'
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
 import { CssBaseline, Theme } from '@material-ui/core'
-import { ThemeProviderProps } from '@material-ui/styles/ThemeProvider'
 import { StylesProvider } from '@material-ui/styles'
 
 import {
@@ -18,7 +17,7 @@ import theme, { Button as StyledButton } from './themes/codaisseur'
  * The children are rendered after baseline.
  * @param {ThemeProviderProps<Theme>} props The props passed into MuiThemeProvider
  */
-export const ThemeProvider = (props: ThemeProviderProps<Theme>): JSX.Element => (
+export const ThemeProvider = (props: any): JSX.Element => (
   <MuiThemeProvider {...props} theme={theme}>
     <CssBaseline />
     {props.children}

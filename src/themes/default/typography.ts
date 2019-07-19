@@ -1,7 +1,22 @@
 import { common, primary } from './colors'
 import { TypographyStyleOptions } from '@material-ui/core/styles/createTypography'
+import { xs, sm, md, lg } from './breakpoints'
+import { getBreakpoint } from '../../lib'
 
 const color = common.black
+
+const fontSize = () => {
+  switch (getBreakpoint()) {
+    case 'xs':
+      return xs
+    case 'sm':
+      return sm
+    case 'md':
+      return md
+    default:
+      return lg
+  }
+}
 
 const fontDefaultFallback = 'Helvetica Neue, Arial, sans-serif'
 const fontFamilyWithFallback = (prefix?: string) => ({
@@ -12,78 +27,107 @@ const fontFamily = fontFamilyWithFallback('Poppins').fontFamily
 
 export const h1: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: '5.9vw',
-  fontWeight: 500,
+  fontWeight: 700 || 'bold',
   lineHeight: 90 / 68,
+  letterSpacing: -1.5,
   color,
+  ...fontSize(),
 }
 
 export const h2: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: '4.2vw',
-  fontWeight: 500,
-  lineHeight: 63 / 60,
+  fontSize: '60px',
+  fontWeight: 400 || 'normal',
+  lineHeight: 79 / 60,
+  letterSpacing: -0.5,
   color,
 }
 
 export const h3: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: '2.8vw',
-  fontWeight: 400,
-  lineHeight: 45 / 34,
+  fontSize: '48px',
+  fontWeight: 400 || 'normal',
+  lineHeight: 63 / 48,
   color,
 }
 
 export const h4: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: '2.4vw',
-  fontWeight: 400,
+  fontSize: '34px',
+  fontWeight: 400 || 'normal',
   lineHeight: 45 / 34,
+  letterSpacing: -0.25,
   color,
 }
-export const h5 = { ...h4 }
-export const h6 = { ...h5 }
+export const h5: TypographyStyleOptions = {
+  ...fontFamilyWithFallback('Roboto Slab'),
+  fontSize: '24px',
+  fontWeight: 400 || 'normal',
+  lineHeight: 32 / 24,
+  color,
+}
+export const h6: TypographyStyleOptions = {
+  ...fontFamilyWithFallback('Roboto Slab'),
+  fontSize: '20px',
+  fontWeight: 700 || 'bold',
+  lineHeight: 26 / 20,
+  letterSpacing: 0.15,
+  color,
+}
 
 export const subtitle1: TypographyStyleOptions = {
-  ...fontFamilyWithFallback('Poppins'),
-  fontSize: '2.2vw',
-  fontWeight: 400,
+  fontFamily,
+  fontSize: '16px',
+  fontWeight: 400 || 'normal',
   lineHeight: 24 / 16,
   color: primary[500],
+  letterSpacing: 0.4,
 }
 
 export const subtitle2: TypographyStyleOptions = {
-  ...subtitle1,
-  color,
+  fontFamily,
+  fontSize: '14px',
+  fontWeight: 400 || 'normal',
+  lineHeight: 24 / 14,
+  color: primary[500],
+  letterSpacing: 0.1,
 }
 
 export const body1: TypographyStyleOptions = {
   fontFamily,
-  fontSize: '2vmin',
-  fontWeight: 400,
+  fontSize: '16px',
+  fontWeight: 400 || 'normal',
   lineHeight: 28 / 16,
 }
 export const body2: TypographyStyleOptions = {
   fontFamily,
-  fontSize: '2.2vmin',
-  fontWeight: 400,
-  lineHeight: 32 / 18,
+  fontSize: '14px',
+  fontWeight: 400 || 'normal',
+  lineHeight: 20 / 14,
 }
 
 export const button: TypographyStyleOptions = {
   fontFamily,
-  fontSize: '2vmin',
-  fontWeight: 600,
-  lineHeight: 21 / 16,
-  letterSpacing: 1.25,
+  fontSize: '16px',
+  fontWeight: 500,
+  lineHeight: 24 / 16,
+  letterSpacing: 1.35,
+  textTransform: 'uppercase',
 }
 
 export const caption: TypographyStyleOptions = {
-  ...body2,
-  fontWeight: 800,
+  fontFamily,
+  fontSize: '12px',
+  fontWeight: 400 || 'normal',
+  lineHeight: 16 / 12,
+  letterSpacing: 0.4,
 }
 
 export const overline: TypographyStyleOptions = {
-  ...body2,
+  fontFamily,
+  fontWeight: 700 || 'bold',
+  fontSize: '10px',
+  lineHeight: 16 / 10,
+  letterSpacing: 1.5,
   textTransform: 'uppercase',
 }
