@@ -1,7 +1,22 @@
 import { common, primary } from './colors'
 import { TypographyStyleOptions } from '@material-ui/core/styles/createTypography'
+import { xs, sm, md, lg } from './breakpoints'
+import { getBreakpoint } from '../../lib'
 
 const color = common.black
+
+const fontSize = () => {
+  switch (getBreakpoint()) {
+    case 'xs':
+      return xs
+    case 'sm':
+      return sm
+    case 'md':
+      return md
+    default:
+      return lg
+  }
+}
 
 const fontDefaultFallback = 'Helvetica Neue, Arial, sans-serif'
 const fontFamilyWithFallback = (prefix?: string) => ({
@@ -12,11 +27,11 @@ const fontFamily = fontFamilyWithFallback('Poppins').fontFamily
 
 export const h1: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
-  fontSize: '68px',
   fontWeight: 700 || 'bold',
   lineHeight: 90 / 68,
   letterSpacing: -1.5,
   color,
+  ...fontSize(),
 }
 
 export const h2: TypographyStyleOptions = {

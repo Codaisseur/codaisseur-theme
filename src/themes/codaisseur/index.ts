@@ -1,5 +1,8 @@
 import { createMuiTheme, withStyles } from '@material-ui/core/styles'
 import { Button as MuiButton } from '@material-ui/core'
+// import { Card as MuiCard } from '@material-ui/core'
+// import { CardContent as MuiCardContent } from '@material-ui/core'
+// import { CardActions as MuiCardActions } from '@material-ui/core'
 
 import { palette, typography, overrides } from '../default'
 
@@ -22,7 +25,7 @@ export const theme = {
   // Perhaps useful later.
   // breakpoints: {},
   // mixins: {},
-  // spacing: 0,
+  // spacing: {},
   // transitions: {},
 }
 
@@ -34,3 +37,7 @@ export const Button = withStyles({
     textTransform: 'capitalize',
   },
 })(MuiButton)
+
+// export const Card = withStyles({})(MuiCard)
+// export const CardContent = withStyles({})(MuiCardContent)
+// export const CardActions = withStyles({})(MuiCardActions)

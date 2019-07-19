@@ -20,6 +20,21 @@ export const px2pt = (px: number) => {
 }
 export const px2unit = px2pt
 
+export const getBreakpoint = () => {
+  const width = window.innerWidth
+  if (width <= 600) {
+    return 'xs'
+  } else if (width < 960) {
+    return 'sm'
+  } else if (width < 1280) {
+    return 'md'
+  } else if (width < 1920) {
+    return 'lg'
+  } else {
+    return 'xl'
+  }
+}
+
 /**
  * Default settings of the withRoot, for SSR.
  * https://material-ui.com/styles/api/#stylesprovider
