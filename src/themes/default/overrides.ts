@@ -12,13 +12,10 @@ export const MuiButton = {
   root: {
     borderRadius: '2rem',
     padding: '14px 22px',
-    // disableFocusRipple: true,
-    // disableRipple: 'true',
   },
   contained: {
     boxShadow: '4px 0px 2px rgba(0, 0, 0, 0.05)',
     disableRipple: 'true',
-    disableFocusRipple: true,
   },
   outlined: {
     padding: '14px 22px',
