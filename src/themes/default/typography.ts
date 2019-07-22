@@ -1,9 +1,26 @@
 import { common, primary } from './colors'
 import { TypographyStyleOptions } from '@material-ui/core/styles/createTypography'
 import { xs, sm, md, lg } from './breakpoints'
-import { getBreakpoint } from '../../lib'
+// import { getBreakpoint } from '../../lib'
 
 const color = common.black
+
+const getBreakpoint = () => {
+  if (typeof window !== 'undefined' && window) {
+    const width = window.innerWidth
+    if (width <= 600) {
+      return 'xs'
+    } else if (width < 960) {
+      return 'sm'
+    } else if (width < 1280) {
+      return 'md'
+    } else if (width < 1920) {
+      return 'lg'
+    } else {
+      return 'xl'
+    }
+  }
+}
 
 const fontSize = () => {
   switch (getBreakpoint()) {
@@ -31,8 +48,9 @@ export const h1: TypographyStyleOptions = {
   lineHeight: 90 / 68,
   letterSpacing: -1.5,
   color,
-  ...fontSize(),
+  ...fontSize().h1,
 }
+console.log('fontSize', fontSize().h1)
 
 export const h2: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),

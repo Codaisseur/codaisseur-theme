@@ -40,7 +40,6 @@ export const withRoot = (Component: React.ComponentType<any>) => {
       super(props)
       this.muiPageContext = getPageContext()
     }
-
     public componentDidMount() {
       // Remove the server-side injected CSS.
       const jssStyles = document.querySelector('#jss-server-side')

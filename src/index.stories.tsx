@@ -50,7 +50,7 @@ const genTypographys = (color: any) =>
 
 const genCards = () => {
   return (
-    <Grid xs={6}>
+    <Grid item xs={6}>
       <Card>
         <CardActionArea>
           <CardMedia src="https://www.iamexpat.nl/sites/default/files/styles/article--full/public/dutch-school-types.jpg" />
