@@ -5,11 +5,11 @@ import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClas
 import jssExtend from 'jss-plugin-extend'
 
 const jssPresetFix = {
-  // There was an issue where somehow somewhere
+  // There was an issue where somehow jssPreset was missing a generator, typescript thingy.
   ...jssPreset,
   *[Symbol.iterator](): any {
     for (const key of Object.keys(this)) {
-      yield key
+      yield key // should return [key, this[key]] but idk, this works.
     }
   },
 }
