@@ -4,14 +4,12 @@ import { ThemeProvider } from './index'
 import { genTypographys, genButtons } from './index.stories'
 require('./serviceWorker')
 
-console.log('loading...')
-
 ReactDOM.render(
   // tslint:disable-next-line: jsx-wrap-multiline
   <ThemeProvider>
     {[
       'primary',
-      'secondairy',
+      'secondary',
       'initial',
       'inherit',
       'textPrimary',
@@ -20,15 +18,15 @@ ReactDOM.render(
     ].map((color: string) => (
       <>
         <div style={{ border: '5px solid black' }}>
-          <h1>{color}</h1>
+          <h1>Typograhy {color}</h1>
         </div>
         {genTypographys(color)}
       </>
     ))}
-    {['primary', 'secondairy', 'default', 'inherit'].map((color: string) => (
+    {['primary', 'secondary', 'default', 'inherit'].map((color: string) => (
       <>
         <div style={{ border: '5px solid black' }}>
-          <h1>{color}</h1>
+          <h1>Buttons {color}</h1>
         </div>
         {genButtons(color)}
       </>

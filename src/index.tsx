@@ -64,12 +64,10 @@ export const withRoot = (Component: React.ComponentType<any>) => {
 
 export const Button = StyledButton
 
+// if index is loaded during API call, we dont want code to run
+// start is in .npmignore, try or fail
 try {
-  if (process.env.NODE_ENV) {
-    // tslint:disable-next-line: no-unused-expression
-    require('./start')
-    console.info('@codaisseur/theme started should not happen during normal usage')
-  }
+  require('./start')
 } catch (e) {
   //
 }
