@@ -1,38 +1,43 @@
 import { common, primary } from './colors'
 import { TypographyStyleOptions } from '@material-ui/core/styles/createTypography'
-import { xs, sm, md, lg } from './breakpoints'
-// import { getBreakpoint } from '../../lib'
+import {
+  Breakpoints,
+  BreakpointValues,
+  Breakpoint,
+} from '@material-ui/core/styles/createBreakpoints'
 
 const color = common.black
 
-const getBreakpoint = () => {
-  if (typeof window !== 'undefined' && window) {
-    const width = window.innerWidth
-    if (width <= 600) {
-      return 'xs'
-    } else if (width < 960) {
-      return 'sm'
-    } else if (width < 1280) {
-      return 'md'
-    } else if (width < 1920) {
-      return 'lg'
-    } else {
-      return 'xl'
-    }
-  }
+const breakpointValues: BreakpointValues = {
+  xs: 600,
+  sm: 960,
+  md: 1280,
+  lg: 1920,
+  xl: 10000,
 }
 
-const fontSize = () => {
-  switch (getBreakpoint()) {
-    case 'xs':
-      return xs
-    case 'sm':
-      return sm
-    case 'md':
-      return md
-    default:
-      return lg
-  }
+const xs: Breakpoint = 'xs'
+const sm: Breakpoint = 'sm'
+const md: Breakpoint = 'md'
+const lg: Breakpoint = 'lg'
+const xl: Breakpoint = 'xl'
+
+export const breakpoints: Breakpoints = {
+  values: breakpointValues,
+  keys: [xs, sm, md, lg, xl],
+  up: key => {
+    const valueNumber = typeof breakpointValues === 'string' ? breakpointValues[key] : key
+    const value = valueNumber.toString()
+    return '@media (min-width:'.concat(value).concat(')')
+  },
+  down: key => {
+    const valueNumber = typeof breakpointValues === 'string' ? breakpointValues[key] : key
+    const value = valueNumber.toString()
+    return '@media (max-width:'.concat(value).concat('px', ')')
+  },
+  between: () => '',
+  only: () => '',
+  width: () => 0,
 }
 
 const fontDefaultFallback = 'Helvetica Neue, Arial, sans-serif'
@@ -41,16 +46,17 @@ const fontFamilyWithFallback = (prefix?: string) => ({
 })
 
 const fontFamily = fontFamilyWithFallback('Poppins').fontFamily
-
 export const h1: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
   fontWeight: 700 || 'bold',
   lineHeight: 90 / 68,
   letterSpacing: -1.5,
   color,
-  ...fontSize().h1,
+  fontSize: '68px',
+  [breakpoints.down(920)]: {
+    fontSize: '48px',
+  },
 }
-console.log('fontSize', fontSize().h1)
 
 export const h2: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
@@ -59,6 +65,12 @@ export const h2: TypographyStyleOptions = {
   lineHeight: 79 / 60,
   letterSpacing: -0.5,
   color,
+  [breakpoints.down(920)]: {
+    fontSize: '36px',
+  },
+  [breakpoints.down(600)]: {
+    fontSize: '34px',
+  },
 }
 
 export const h3: TypographyStyleOptions = {
@@ -67,6 +79,9 @@ export const h3: TypographyStyleOptions = {
   fontWeight: 400 || 'normal',
   lineHeight: 63 / 48,
   color,
+  [breakpoints.down(920)]: {
+    fontSize: '30px',
+  },
 }
 
 export const h4: TypographyStyleOptions = {
@@ -76,6 +91,9 @@ export const h4: TypographyStyleOptions = {
   lineHeight: 45 / 34,
   letterSpacing: -0.25,
   color,
+  [breakpoints.down(920)]: {
+    fontSize: '28px',
+  },
 }
 export const h5: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
