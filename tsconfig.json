@@ -3,7 +3,7 @@
     "target": "es6",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "commonjs",
     "sourceMap": true,
     "outDir": "./dist/",
     "skipLibCheck": true,
@@ -15,15 +15,12 @@
     "jsx": "preserve",
     "removeComments": true,
     "preserveConstEnums": true,
-    "declaration": false,
+    "declaration": true,
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "noEmit": true,
-    "isolatedModules": true
   },
   "include": [
     "./src/**/*.tsx",
@@ -31,6 +28,8 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*.stories.*"
+    "**/*.stories.*",
+    "src/start.*",
+    "src/serviceWorker.*"
   ]
 }
