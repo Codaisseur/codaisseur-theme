@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc -p . && npx np",
+    "build": "tsc -p .",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
     "storybook": "start-storybook",
@@ -54,10 +54,10 @@
     "url": "https://github.com/Codaisseur/codaisseur-theme/issues"
   },
   "husky": {
+    "interactive": true,
     "hooks": {
       "pre-commit": "yarn lint:fix && yarn lint-staged",
-      "pre-push": "yarn lint && bin/gittag",
-      "post-commit": ""
+      "pre-push": "yarn lint;bin/gittag"
     }
   },
   "lint-staged": {
