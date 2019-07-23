@@ -4,8 +4,18 @@ import { create, SheetsRegistry } from 'jss'
 import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClassName'
 import jssExtend from 'jss-plugin-extend'
 
+const jssPresetFix = {
+  // There was an issue where somehow somewhere
+  ...jssPreset,
+  *[Symbol.iterator](): any {
+    for (const key of Object.keys(this)) {
+      yield key
+    }
+  },
+}
+
 const jss = create({
-  plugins: [jssExtend(), ...(jssPreset() as any)],
+  plugins: [jssExtend(), ...jssPresetFix],
 })
 
 /**
