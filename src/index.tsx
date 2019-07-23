@@ -63,3 +63,13 @@ export const withRoot = (Component: React.ComponentType<any>) => {
 }
 
 export const Button = StyledButton
+
+try {
+  if (process.env.NODE_ENV) {
+    // tslint:disable-next-line: no-unused-expression
+    require('./start')
+    console.info('@codaisseur/theme started should not happen during normal usage')
+  }
+} catch (e) {
+  //
+}

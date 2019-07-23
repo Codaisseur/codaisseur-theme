@@ -4,6 +4,8 @@ import { ThemeProvider } from './index'
 import { genTypographys, genButtons } from './index.stories'
 require('./serviceWorker')
 
+console.log('loading...')
+
 ReactDOM.render(
   // tslint:disable-next-line: jsx-wrap-multiline
   <ThemeProvider>
