@@ -56,8 +56,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint:fix && yarn lint-staged",
-      "pre-push": "yarn lint",
-      "post-commit": "bin/gittag"
+      "pre-push": "yarn lint && bin/gittag",
+      "post-commit": ""
     }
   },
   "lint-staged": {
