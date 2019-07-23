@@ -1,28 +1,12 @@
 import { common, primary } from './colors'
 import { TypographyStyleOptions } from '@material-ui/core/styles/createTypography'
-import createBreakpoints, {
+import {
   Breakpoints,
   BreakpointValues,
   Breakpoint,
-  BreakpointsOptions,
 } from '@material-ui/core/styles/createBreakpoints'
 
-// import { getBreakpoint } from '../../lib'
-
 const color = common.black
-
-// const fontSize = () => {
-//   switch (getBreakpoint()) {
-//     case 'xs':
-//       return xs
-//     case 'sm':
-//       return sm
-//     case 'md':
-//       return md
-//     default:
-//       return lg
-//   }
-// }
 
 const breakpointValues: BreakpointValues = {
   xs: 600,
@@ -55,7 +39,6 @@ export const breakpoints: Breakpoints = {
   only: () => '',
   width: () => 0,
 }
-console.log('breakpoints.up', breakpoints.up(600))
 
 const fontDefaultFallback = 'Helvetica Neue, Arial, sans-serif'
 const fontFamilyWithFallback = (prefix?: string) => ({
@@ -70,11 +53,10 @@ export const h1: TypographyStyleOptions = {
   letterSpacing: -1.5,
   color,
   fontSize: '68px',
-  [breakpoints.down(1900)]: {
-    fontSize: '32px',
+  [breakpoints.down(920)]: {
+    fontSize: '48px',
   },
 }
-console.log(h1.fontSize)
 
 export const h2: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
@@ -83,6 +65,12 @@ export const h2: TypographyStyleOptions = {
   lineHeight: 79 / 60,
   letterSpacing: -0.5,
   color,
+  [breakpoints.down(920)]: {
+    fontSize: '36px',
+  },
+  [breakpoints.down(600)]: {
+    fontSize: '34px',
+  },
 }
 
 export const h3: TypographyStyleOptions = {
@@ -91,6 +79,9 @@ export const h3: TypographyStyleOptions = {
   fontWeight: 400 || 'normal',
   lineHeight: 63 / 48,
   color,
+  [breakpoints.down(920)]: {
+    fontSize: '30px',
+  },
 }
 
 export const h4: TypographyStyleOptions = {
@@ -100,6 +91,9 @@ export const h4: TypographyStyleOptions = {
   lineHeight: 45 / 34,
   letterSpacing: -0.25,
   color,
+  [breakpoints.down(920)]: {
+    fontSize: '28px',
+  },
 }
 export const h5: TypographyStyleOptions = {
   ...fontFamilyWithFallback('Roboto Slab'),
