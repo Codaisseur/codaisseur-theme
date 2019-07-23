@@ -5,7 +5,7 @@ import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClas
 import jssExtend from 'jss-plugin-extend'
 
 const jss = create({
-  plugins: [...jssPreset().plugins, jssExtend()],
+  plugins: [jssExtend(), ...jssPreset()],
 })
 
 /**
