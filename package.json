@@ -1,6 +1,6 @@
 {
   "name": "@codaisseur/theme",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "jss-plugin-extend": "^10.0.0-alpha.17",
+    "npm": "6.8.0",
     "react": "^16.8.6"
   },
   "scripts": {
