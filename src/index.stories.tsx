@@ -12,7 +12,7 @@ import {
   Grid,
 } from '@material-ui/core'
 
-const genButtons = (color: any) => {
+export const genButtons = (color: any) => {
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
     <div key={key}>
       <Button variant={variant} color={color}>
@@ -24,7 +24,7 @@ const genButtons = (color: any) => {
     </div>
   ))
 }
-const genTypographys = (color: any) =>
+export const genTypographys = (color: any) =>
   [
     'h1',
     'h2',
@@ -48,7 +48,7 @@ const genTypographys = (color: any) =>
     </div>
   ))
 
-const genCards = () => {
+export const genCards = () => {
   return (
     <Grid item xs={6}>
       <Card>

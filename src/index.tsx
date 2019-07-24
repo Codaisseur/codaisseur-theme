@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
-import { CssBaseline, Theme } from '@material-ui/core'
+import { CssBaseline } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/styles'
 
 import {
@@ -63,3 +63,11 @@ export const withRoot = (Component: React.ComponentType<any>) => {
 }
 
 export const Button = StyledButton
+
+// if index is loaded during API call, we dont want code to run
+// start is in .npmignore, try or fail
+try {
+  require('./start')
+} catch (e) {
+  //
+}

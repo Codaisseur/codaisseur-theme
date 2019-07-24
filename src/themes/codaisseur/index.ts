@@ -5,7 +5,6 @@ import { Button as MuiButton } from '@material-ui/core'
 // import { CardActions as MuiCardActions } from '@material-ui/core'
 
 import { palette, typography, overrides } from '../default'
-import { breakpoints } from '../default/typography'
 
 export const theme = {
   palette: {
@@ -24,9 +23,7 @@ export const theme = {
   },
 
   // Perhaps useful later.
-  breakpoints: {
-    ...breakpoints,
-  },
+  // breakpoints: {},
   // mixins: {},
   // spacing: {},
   // transitions: {},

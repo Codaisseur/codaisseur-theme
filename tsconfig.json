@@ -12,10 +12,15 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "removeComments": true,
     "preserveConstEnums": true,
-    "declaration": true
+    "declaration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
   },
   "include": [
     "./src/**/*.tsx",
@@ -23,6 +28,8 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*.stories.*"
+    "**/*.stories.*",
+    "src/start.*",
+    "src/serviceWorker.*"
   ]
 }
