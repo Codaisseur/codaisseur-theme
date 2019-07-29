@@ -2,7 +2,6 @@ import {
   Breakpoints,
   BreakpointValues,
   Breakpoint,
-  keys,
 } from '@material-ui/core/styles/createBreakpoints'
 
 const xs: Breakpoint = 'xs'
