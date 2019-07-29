@@ -22,12 +22,38 @@ const breakpoints: Breakpoints = {
   values: breakpointValues,
   keys: [xs, sm, md, lg, xl],
   up: (key: any) => {
-    const valueNumber = typeof breakpointValues === 'string' ? breakpointValues[key] : key
+    function convertBreakpoints() {
+      if (key === 'xs') {
+        return breakpoints.values.xs
+      } else if (key === 'sm') {
+        return breakpoints.values.sm
+      } else if (key === 'md') {
+        return breakpointValues.md
+      } else if (key === 'lg') {
+        return breakpointValues.lg
+      } else {
+        return breakpointValues.xl
+      }
+    }
+    const valueNumber = typeof key === 'string' ? convertBreakpoints() : key
     const value = valueNumber.toString()
-    return '@media (min-width:'.concat(value).concat(')')
+    return '@media (min-width:'.concat(value).concat('px', ')')
   },
   down: (key: any) => {
-    const valueNumber = typeof breakpointValues === 'string' ? breakpointValues[key] : key
+    function convertBreakpoints() {
+      if (key === 'xs') {
+        return breakpoints.values.xs
+      } else if (key === 'sm') {
+        return breakpoints.values.sm
+      } else if (key === 'md') {
+        return breakpointValues.md
+      } else if (key === 'lg') {
+        return breakpointValues.lg
+      } else {
+        return breakpointValues.xl
+      }
+    }
+    const valueNumber = typeof key === 'string' ? convertBreakpoints() : key
     const value = valueNumber.toString()
     return '@media (max-width:'.concat(value).concat('px', ')')
   },

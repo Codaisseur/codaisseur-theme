@@ -17,7 +17,7 @@ export const h1: TypographyStyleOptions = {
   letterSpacing: -1.5,
   color,
   fontSize: '68px',
-  [breakpoints.down(920)]: {
+  [breakpoints.down('sm')]: {
     fontSize: '48px',
   },
 }
@@ -29,10 +29,10 @@ export const h2: TypographyStyleOptions = {
   lineHeight: 79 / 60,
   letterSpacing: -0.5,
   color,
-  [breakpoints.down(920)]: {
+  [breakpoints.down('sm')]: {
     fontSize: '36px',
   },
-  [breakpoints.down(600)]: {
+  [breakpoints.down('xs')]: {
     fontSize: '34px',
   },
 }
@@ -43,7 +43,7 @@ export const h3: TypographyStyleOptions = {
   fontWeight: 400 || 'normal',
   lineHeight: 63 / 48,
   color,
-  [breakpoints.down(920)]: {
+  [breakpoints.down('sm')]: {
     fontSize: '30px',
   },
 }
@@ -55,7 +55,7 @@ export const h4: TypographyStyleOptions = {
   lineHeight: 45 / 34,
   letterSpacing: -0.25,
   color,
-  [breakpoints.down(920)]: {
+  [breakpoints.down('sm')]: {
     fontSize: '28px',
   },
 }
