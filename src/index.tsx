@@ -1,5 +1,5 @@
 import React from 'react'
-import { existsSync } from 'fs'
+// import { existsSync } from 'fs'
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
 import { CssBaseline } from '@material-ui/core'
@@ -67,6 +67,6 @@ export const Button = StyledButton
 
 // if index is loaded during API call, we dont want code to run
 // start is in .npmignore, try or fail
-if (existsSync('./start')) {
-  require('./start')
-}
+// if (existsSync('./start')) {
+//   require('./start')
+// }
