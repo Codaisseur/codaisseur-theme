@@ -2,7 +2,7 @@ import { createGenerateClassName, jssPreset } from '@material-ui/styles'
 import { StylesOptions } from '@material-ui/styles/StylesProvider'
 import { create, SheetsRegistry } from 'jss'
 import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClassName'
-import jssExtend from 'jss-plugin-extend'
+// import jssExtend from 'jss-plugin-extend'
 
 // const jss = create({ ...jssPreset })
 
@@ -16,9 +16,7 @@ import jssExtend from 'jss-plugin-extend'
 //   },
 // }
 
-const jss = create({
-  plugins: [jssExtend(), ...(jssPreset as any)],
-})
+const jss = create({ plugins: [...jssPreset().plugins] })
 
 /**
  * Convert Pixel to Point (spacing unit)
