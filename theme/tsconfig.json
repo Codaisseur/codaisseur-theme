@@ -1,0 +1,9 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "lib": ["es6", "es2015", "dom", "dom.iterable"],
+    "outDir": "./build"
+  }
+ }
