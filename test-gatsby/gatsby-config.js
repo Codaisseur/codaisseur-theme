@@ -5,12 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        pathToStylesProvider: `../theme/build/index.js`,
-      },
-    },
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

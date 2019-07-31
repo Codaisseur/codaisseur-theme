@@ -1,8 +1,14 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 
-export const theme = {
+import * as defaultTypography from './typography'
+
+import * as defaultColors from './colors'
+
+export const theme = createMuiTheme({
   typography: {
-    fontSize: 100,
+    ...defaultTypography
   },
-}
-export default createMuiTheme(theme)
+  palette: {
+    ...defaultColors
+  },
+})
