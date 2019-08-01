@@ -43,7 +43,11 @@ export const theme = {
 export default createMuiTheme(theme) as ITheme
 
 // Create custom component
-export const Button = withStyles({})(MuiButton)
+export const Button = withStyles({
+  label: {
+    textTransform: 'capitalize',
+  },
+})(MuiButton)
 
 // export const Card = withStyles({})(MuiCard)
 // export const CardContent = withStyles({})(MuiCardContent)
