@@ -1,8 +1,8 @@
-import { primary } from './palette'
+import { common } from './palette'
 import { Typography, TypographyStyle } from '@material-ui/core/styles/createTypography'
 import breakpoints from './breakpoints'
 
-const color = primary.main
+const color = common.font
 
 const fontDefaultFallback = 'Helvetica Neue, Arial, sans-serif'
 const fontFamilyWithFallback = (prefix?: string) => ({
