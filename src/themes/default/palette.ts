@@ -1,10 +1,11 @@
 import {
-  PaletteOptions,
-  ColorPartial,
   TypeBackground,
+  PaletteColor,
+  Palette,
 } from '@material-ui/core/styles/createPalette'
 
 import { CommonColors } from '@material-ui/core/colors/common'
+import { Color } from '@material-ui/core'
 
 // Extending CommonColors from MUI
 export interface ICommonColors extends CommonColors {
@@ -12,10 +13,6 @@ export interface ICommonColors extends CommonColors {
   lightOrange: string
   yellow: string
   lightBlue: string
-}
-
-export interface ITypeBackground extends Partial<TypeBackground> {
-  // Nothing in here yet, not sure how and when this is useful but its baked into Mui!
 }
 
 // Crystal Responses
@@ -27,71 +24,56 @@ export interface IStatusColors {
 }
 
 // Extending main PalleteOptions
-export interface IPaletteOptions extends Partial<PaletteOptions> {
-  status: IStatusColors
-}
-
 export const common: ICommonColors = {
-  black: '#212121',
-  white: '#FFFFFF',
+  black: '#000',
+  white: '#FFF',
   darkOrange: '#D7461A',
   lightOrange: '#FF9800',
   yellow: '#FFBE31',
   lightBlue: '#0088FA',
 }
 
-export const background: ITypeBackground = {
+export const background: TypeBackground = {
   default: common.white,
   paper: common.white,
 }
 
-export const primary: ColorPartial = {
-  // http://mcg.mbitson.com/#!?mcgpalette0=%23c1272d
-  50: '#F8E5E6',
-  100: '#ECBEC0',
-  200: '#E09396',
-  300: '#D4686C',
-  400: '#CA474D',
-  500: '#C1272D',
-  600: '#BB2328',
-  700: '#B31D22',
-  800: '#AB171C',
-  900: '#9E0E11',
-  A100: '#FFCDCE',
-  A200: '#FF9A9B',
-  A400: '#FF6769',
-  A700: '#FF4D50',
+export const primary: PaletteColor = {
+  main: '#C1272D',
+  light: '#D4686C',
+  dark: '#B31D22',
+  contrastText: common.white,
 }
 
-export const secondary: ColorPartial = {
-  // http://mcg.mbitson.com/#!?mcgpalette0=%23084dd2
-  50: '#E1EAFA',
-  100: '#B5CAF2',
-  200: '#84A6E9',
-  300: '#5282E0',
-  400: '#2D68D9',
-  500: '#084DD2',
-  600: '#0746CD',
-  700: '#063DC7',
-  800: '#0434C1',
-  900: '#0225B6',
-  A100: '#DFE3FF',
-  A200: '#ACB7FF',
-  A400: '#798BFF',
-  A700: '#5F75FF',
+export const secondary: PaletteColor = {
+  main: '#084DD2',
+  light: '#5282E0',
+  dark: '#063DC7',
+  contrastText: common.white,
 }
 
-export const error: ColorPartial = {
-  300: '#A00000',
-  500: '#AA0000',
-  800: '#FF0000',
+export const error: PaletteColor = {
+  main: '#AA0000',
+  light: '#A00000',
+  dark: '#FF0000',
+  contrastText: common.white,
 }
 
-export const grey: ColorPartial = {
+export const grey: Color = {
+  50: 'string',
   100: '#FAFAFA',
   200: '#E9E9E9',
   300: '#9E9E9E',
   400: '#424242',
+  500: 'string',
+  600: 'string',
+  700: 'string',
+  800: 'string',
+  900: 'string',
+  A100: 'string',
+  A200: 'string',
+  A400: 'string',
+  A700: 'string',
 }
 
 export const status: IStatusColors = {
@@ -123,4 +105,15 @@ export const gradient: IGradients = {
   r2l: ``,
   t2b: ``,
   b2t: ``,
+}
+
+export interface IPalette extends Palette {
+  primary: PaletteColor
+  secondary: PaletteColor
+  common: ICommonColors
+  background: TypeBackground
+  error: PaletteColor
+  grey: Color
+  status: IStatusColors
+  gradient: IGradients
 }
