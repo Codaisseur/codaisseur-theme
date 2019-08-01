@@ -2,7 +2,7 @@ import { common, primary } from './palette'
 import { Typography, TypographyStyle } from '@material-ui/core/styles/createTypography'
 import breakpoints from './breakpoints'
 
-const color = common.black
+const color = primary.main
 
 const fontDefaultFallback = 'Helvetica Neue, Arial, sans-serif'
 const fontFamilyWithFallback = (prefix?: string) => ({
@@ -87,7 +87,7 @@ export const subtitle1: TypographyStyle = {
   fontWeight: 400 || 'normal',
   lineHeight: 24 / 16,
   fontStyle: 'normal',
-  color: primary.main,
+  color,
   letterSpacing: 0.4,
 }
 
@@ -97,7 +97,7 @@ export const subtitle2: TypographyStyle = {
   fontWeight: 400 || 'normal',
   lineHeight: 24 / 14,
   fontStyle: 'normal',
-  color: primary.main,
+  color,
   letterSpacing: 0.1,
 }
 
@@ -107,7 +107,7 @@ export const body1: TypographyStyle = {
   fontWeight: 400 || 'normal',
   lineHeight: 28 / 16,
   fontStyle: 'normal',
-  color: '#000',
+  color,
 }
 export const body2: TypographyStyle = {
   fontFamily,
@@ -115,7 +115,7 @@ export const body2: TypographyStyle = {
   fontWeight: 400 || 'normal',
   lineHeight: 20 / 14,
   fontStyle: 'normal',
-  color: common.black,
+  color,
 }
 
 export const button: TypographyStyle = {
@@ -126,7 +126,7 @@ export const button: TypographyStyle = {
   letterSpacing: 1.35,
   textTransform: 'uppercase',
   fontStyle: 'normal',
-  color: common.black,
+  color,
 }
 
 export const caption: TypographyStyle = {
@@ -136,7 +136,7 @@ export const caption: TypographyStyle = {
   lineHeight: 16 / 12,
   letterSpacing: 0.4,
   fontStyle: 'normal',
-  color: common.black,
+  color,
 }
 
 export const overline: TypographyStyle = {
@@ -147,7 +147,7 @@ export const overline: TypographyStyle = {
   letterSpacing: 1.5,
   textTransform: 'uppercase',
   fontStyle: 'normal',
-  color: common.black,
+  color,
 }
 
 export interface ITypography extends Typography {}
