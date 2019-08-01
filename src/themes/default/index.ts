@@ -5,55 +5,30 @@ import {
   grey,
   error,
   status,
+  gradient,
   background,
-  IPaletteOptions,
-  ICommonColors,
-  ITypeBackground,
-} from './colors'
 
 import * as defaultTypography from './typography'
 import * as defaultOverrides from './overrides'
 
-// Typescript MUI does not like custom keys in their palette
-// We do, so with declare module we overwrite the interface in that file
-// We're extending the original interface keeping compatibility
-declare module '@material-ui/core/styles/createPalette' {
-  interface PaletteOptions extends IPaletteOptions {}
-  interface TypeBackground extends ITypeBackground {}
-}
-
-declare module '@material-ui/core/colors' {
-  interface CommonColors extends ICommonColors {}
-}
-
 export const palette = {
   common,
   background,
+  gradient,
 
   // extended palettes
   primary: {
-    light: primary[200],
-    main: primary[500],
-    dark: primary[800],
-    contrastText: common.white,
     ...primary,
   },
   secondary: {
-    light: secondary[200],
-    main: secondary[500],
-    dark: secondary[800],
-    contrastText: common.white,
     ...secondary,
   },
-  text: {},
+  // text: {
+  //   ...text,
+  // },
   error: {
-    light: error[200],
-    main: error[500],
-    dark: error[800],
-    contrastText: common.white,
     ...error,
   },
-  action: {},
   // normal palette
   grey,
 
@@ -61,10 +36,18 @@ export const palette = {
   status, // crystal error codes colors
 
   // Perhaps useful later
-  // divider: undefined,
-  // tonalOffset: undefined,
-  // type: undefined,
-  // contrastThreshold: undefined,
+  // divider: '',
+  // tonalOffset: 0,
+  // type: 'light',
+  // contrastThreshold: 0,
+  // action: {
+  //   active: '',
+  //   hover: 'string',
+  //   hoverOpacity: 0,
+  //   selected: 'string',
+  //   disabled: 'string',
+  //   disabledBackground: 'string',
+  // },
 }
 
 export const typography = {

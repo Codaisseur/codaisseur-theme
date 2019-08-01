@@ -37,5 +37,9 @@ Our custom components are defined in the homonym directory. The 'theme' object i
 Once this is done, you can import components from the theme straight in your project. E.g., 
 `import { Button } from '@codaisseur/theme'` and then use it like you would normally do with any Material UI component.
 
+### Additional good-to-know (Material UI)
+In themes/default/index.ts we create all the "default" objects like palette, typography, breakpoints, etc. that will then become the keys of the final 'theme' object, declared and exported in themes/codaisseur/index.ts. 
+Though custom components have their own directory, in the default directory you'll see an 'overrides' file. Use this any time you need to override the base components of a MUI element, rather than creating a completely new custom component.
+
 
 
