@@ -16,26 +16,17 @@ export const palette = {
   common,
   background,
   gradient,
-
-  // extended palettes
   primary: {
     ...primary,
   },
   secondary: {
     ...secondary,
   },
-  // text: {
-  //   ...text,
-  // },
   error: {
     ...error,
   },
-  // normal palette
   grey,
-
-  // custom
-  status, // crystal error codes colors
-
+  status,
   // Perhaps useful later
   // divider: '',
   // tonalOffset: 0,

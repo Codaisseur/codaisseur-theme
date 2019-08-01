@@ -18,7 +18,7 @@ ReactDOM.render(
     ].map((color: string) => (
       <>
         <div style={{ border: '5px solid black' }}>
-          <h1>Typograhy {color}</h1>
+          <h1>Typography {color}</h1>
         </div>
         {genTypographys(color)}
       </>
