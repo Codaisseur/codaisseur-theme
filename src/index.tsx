@@ -62,7 +62,6 @@ export const withRoot = (Component: React.ComponentType<any>) => {
   }
 }
 
-// tslint:disable-next-line: prettier
 export interface Theme extends ITheme {}
 export const Button = StyledButton
 

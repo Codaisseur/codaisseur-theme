@@ -65,3 +65,10 @@ export const MuiTouchRipple = {
     display: 'none',
   },
 }
+
+export const MUIDataTable = {
+  // mui-data-table package
+  paper: {
+    boxShadow: 'none',
+  },
+}
