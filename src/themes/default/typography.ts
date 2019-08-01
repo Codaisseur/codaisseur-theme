@@ -1,4 +1,4 @@
-import { common, primary } from './palette'
+import { primary } from './palette'
 import { Typography, TypographyStyle } from '@material-ui/core/styles/createTypography'
 import breakpoints from './breakpoints'
 
