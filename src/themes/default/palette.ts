@@ -13,6 +13,7 @@ export interface ICommonColors extends CommonColors {
   lightOrange: string
   yellow: string
   lightBlue: string
+  font: string
 }
 
 // Crystal Responses
@@ -25,7 +26,8 @@ export interface IStatusColors {
 
 // Extending main PalleteOptions
 export const common: ICommonColors = {
-  black: '#000',
+  black: '#212121',
+  font: '#000',
   white: '#FFF',
   darkOrange: '#D7461A',
   lightOrange: '#FF9800',
@@ -85,7 +87,7 @@ export const status: IStatusColors = {
 
 const gradientList = ['#D7461A', '#C1272D', '#733782', '#084DD2', '#0088FA']
 
-interface IGradients {
+export interface IGradients {
   l2r: string // Left to right
   r2l: string
   t2b: string
