@@ -18,7 +18,13 @@ https://www.figma.com/file/VGMnY53gxNur3ad8cbNpT9/Codaisseur-Design-System?node-
 To start the application you have 2 options:
 
 1) Storybook - simply run `yarn storybook` and visit the address that will open automatically. This is super useful if you wanna test components independently.
-2) `yarn start` --> then visit http://localhost:3000/. 
+2) `yarn start` requires an uncomment of the code on main index.tsx
+```
+// if index is loaded during API call, we dont want code to run
+// start is in .npmignore, try or fail
+// import('./start').catch(() => ({}))
+```
+Then save and run the command. Please make sure that line is commented out again when releasing a package
 
 ## Deploy it
 1. Run a `yarn build` and check if your latest changes appear in the `dist` directory.
