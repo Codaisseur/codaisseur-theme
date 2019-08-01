@@ -33,7 +33,8 @@
   ],
   "linterOptions": {
     "exclude": [
-      "dist"
+      "dist",
+      "src/serviceWorker.ts"
     ]
   }
 }

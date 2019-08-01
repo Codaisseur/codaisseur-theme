@@ -7,6 +7,7 @@ import {
   status,
   gradient,
   background,
+} from './palette'
 
 import * as defaultTypography from './typography'
 import * as defaultOverrides from './overrides'
