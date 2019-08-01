@@ -1,7 +1,7 @@
 // Override of base components of MUI.
 // Using this instead of making our own custom components, we don't even need to modify our existing code base (except for using this theme provider)
 // Using root: {} you override every variant, outside of root you only modify the 'default' variant.
-import { grey, common } from './palette'
+import { secondary } from './palette'
 export const MuiButtonBase = {
   // node_modules/@material-ui/core/ButtonBase/ButtonBase.js
   root: {},
@@ -12,6 +12,9 @@ export const MuiButton = {
   root: {
     borderRadius: '2rem',
     padding: '14px 22px',
+  },
+  newStylesFn: {
+    textTransform: 'uppercase',
   },
   contained: {
     boxShadow: '4px 0px 2px rgba(0, 0, 0, 0.05)',
@@ -26,8 +29,8 @@ export const MuiButton = {
   text: {
     padding: '14px 22px',
     '&:hover': {
-      background: grey[300],
-      color: common.white,
+      background: 'none',
+      color: secondary.main,
     },
   },
 }

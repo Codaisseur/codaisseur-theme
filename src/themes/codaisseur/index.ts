@@ -27,26 +27,23 @@ export const theme = {
   palette: {
     ...palette,
   } as IPalette,
+
   typography: {
     ...typography,
   } as ITypography,
+
   overrides: {
     ...overrides,
   },
 
   shape: {
-    // The button component in MUI, it is taking its default radius from this object
     borderRadius: 24,
   },
 }
 export default createMuiTheme(theme) as ITheme
 
 // Create custom component
-export const Button = withStyles({
-  label: {
-    textTransform: 'capitalize',
-  },
-})(MuiButton)
+export const Button = withStyles({})(MuiButton)
 
 // export const Card = withStyles({})(MuiCard)
 // export const CardContent = withStyles({})(MuiCardContent)
