@@ -67,7 +67,7 @@ export const MuiTouchRipple = {
 }
 
 export const MUIDataTable = {
-  // mui-data-table package
+  // mui-data-table package, used in Codmin
   paper: {
     boxShadow: 'none',
   },
