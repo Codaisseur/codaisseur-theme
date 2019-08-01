@@ -1,6 +1,4 @@
 import {
-  PaletteOptions,
-  ColorPartial,
   TypeBackground,
   PaletteColor,
   Palette,
@@ -26,13 +24,9 @@ export interface IStatusColors {
 }
 
 // Extending main PalleteOptions
-export interface IPaletteOptions extends Partial<PaletteOptions> {
-  status: IStatusColors
-}
-
 export const common: ICommonColors = {
-  black: '#212121',
-  white: '#FFFFFF',
+  black: '#000',
+  white: '#FFF',
   darkOrange: '#D7461A',
   lightOrange: '#FF9800',
   yellow: '#FFBE31',
@@ -48,21 +42,21 @@ export const primary: PaletteColor = {
   main: '#C1272D',
   light: '#D4686C',
   dark: '#B31D22',
-  contrastText: '#CCC',
+  contrastText: common.white,
 }
 
 export const secondary: PaletteColor = {
-  main: '#C1272D',
-  light: '#D4686C',
-  dark: '#B31D22',
-  contrastText: '#CCC',
+  main: '#084DD2',
+  light: '#5282E0',
+  dark: '#063DC7',
+  contrastText: common.white,
 }
 
 export const error: PaletteColor = {
   main: '#AA0000',
   light: '#A00000',
   dark: '#FF0000',
-  contrastText: '#CCC',
+  contrastText: common.white,
 }
 
 export const grey: Color = {

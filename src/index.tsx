@@ -1,8 +1,7 @@
 import React from 'react'
-// import { existsSync } from 'fs'
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
-import { CssBaseline } from '@material-ui/core'
+import { CssBaseline, Theme } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/styles'
 
 import {
@@ -11,7 +10,7 @@ import {
 } from './lib'
 
 // We only have 1 theme, KISS.
-import theme, { Button as StyledButton } from './themes/codaisseur'
+import theme, { Button as StyledButton, ITheme } from './themes/codaisseur'
 
 /**
  * wrapper of our own custom theme with baselining included.
@@ -63,10 +62,10 @@ export const withRoot = (Component: React.ComponentType<any>) => {
   }
 }
 
+// tslint:disable-next-line: prettier
+export interface Theme extends ITheme {}
 export const Button = StyledButton
 
 // if index is loaded during API call, we dont want code to run
 // start is in .npmignore, try or fail
-// if (existsSync('./start')) {
-//   require('./start')
-// }
+import('./start').catch(() => ({}))

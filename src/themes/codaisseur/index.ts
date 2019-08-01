@@ -1,18 +1,35 @@
-import { createMuiTheme, withStyles } from '@material-ui/core/styles'
+import { createMuiTheme, withStyles, Theme } from '@material-ui/core/styles'
 import { Button as MuiButton } from '@material-ui/core'
-// import { Card as MuiCard } from '@material-ui/core'
-// import { CardContent as MuiCardContent } from '@material-ui/core'
-// import { CardActions as MuiCardActions } from '@material-ui/core'
 
 import { palette, typography, overrides } from '../default'
+import { IPalette } from '../default/palette'
+import { ITypography } from '../default/typography'
+
+export interface ITheme extends Theme {
+  // Custom
+  palette: IPalette
+
+  // Rest
+  // shape: Shape
+  // breakpoints: Breakpoints
+  // direction: Direction
+  // mixins: Mixins
+  // overrides?: Overrides
+  // props?: ComponentsProps
+  // shadows: Shadows
+  // spacing: Spacing
+  // transitions: Transitions
+  // typography: Typography
+  // zIndex: ZIndex
+}
 
 export const theme = {
   palette: {
     ...palette,
-  },
+  } as IPalette,
   typography: {
     ...typography,
-  },
+  } as ITypography,
   overrides: {
     ...overrides,
   },
@@ -21,14 +38,8 @@ export const theme = {
     // The button component in MUI, it is taking its default radius from this object
     borderRadius: 24,
   },
-
-  // Perhaps useful later.
-  // breakpoints: {},
-  // mixins: {},
-  // spacing: {},
-  // transitions: {},
 }
-export default createMuiTheme(theme)
+export default createMuiTheme(theme) as ITheme
 
 // Create custom component
 export const Button = withStyles({
