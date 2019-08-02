@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^4.3.0",
+    "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.0",
     "jss": "^10.0.0-alpha.23",
     "jss-plugin-extend": "^10.0.0-alpha.23",

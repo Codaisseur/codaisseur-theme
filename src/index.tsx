@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
-import { CssBaseline, Theme } from '@material-ui/core'
+import { CssBaseline } from '@material-ui/core'
 import { StylesProvider } from '@material-ui/styles'
 
 import {
@@ -11,6 +11,7 @@ import {
 
 // We only have 1 theme, KISS.
 import theme, { Button as StyledButton, ITheme } from './themes/codaisseur'
+
 
 /**
  * wrapper of our own custom theme with baselining included.
@@ -67,4 +68,4 @@ export const Button = StyledButton
 
 // if index is loaded during API call, we dont want code to run
 // start is in .npmignore, try or fail
-// import('./start').catch(() => ({}))
+import('./start').catch(() => ({}))
