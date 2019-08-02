@@ -49,9 +49,7 @@ ReactDOM.render(
       price="800"
       level="No experience needed!"
       description="Collaborate with others to build and deploy different types of web applications."
-      image={
-        'https://www.teacher.org/wp-content/uploads/2018/02/Teachers-Professionals-1024x676.jpg'
-      }
+      image="https://www.teacher.org/wp-content/uploads/2018/02/Teachers-Professionals-1024x676.jpg"
     />
   </ThemeProvider>,
   document.getElementById('root')

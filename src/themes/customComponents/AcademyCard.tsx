@@ -1,4 +1,8 @@
 import React from 'react'
+import { ClockIcon } from '../../icons/clock'
+import { TagIcon } from '../../icons/tag'
+import { CalendarIcon } from '../../icons/calendar'
+import { GlobeIcon } from '../../icons/globe'
 
 import {
   Card,
@@ -24,14 +28,6 @@ export interface IAcademyCard {
   level: any
 }
 
-function TimeIcon(props: any) {
-  return (
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
-  )
-}
-
 export const AcademyCard = (props: IAcademyCard) => {
   return (
     <div>
@@ -43,10 +39,10 @@ export const AcademyCard = (props: IAcademyCard) => {
             <Typography variant="overline">{props.level}</Typography>
             <Typography variant="body1">{props.description}</Typography>
             <Typography variant="body1" color="initial">
-              <TimeIcon /> {props.duration} weeks
-              <TimeIcon /> {props.price}€
-              <TimeIcon /> {props.date}
-              <TimeIcon /> {props.language}
+              <ClockIcon /> {props.duration} weeks
+              <TagIcon /> {props.price}€
+              <CalendarIcon /> {props.date}
+              <GlobeIcon /> {props.language}
             </Typography>
           </CardContent>
         </CardActionArea>
