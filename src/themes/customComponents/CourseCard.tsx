@@ -39,7 +39,6 @@ const useStyles = makeStyles(() => ({
     backgroundRepeat: 'no-repeat',
     objectFit: 'cover',
     backgroundPosition: 'center center',
-    // backgroundSize: 'cover',
     width: '100%',
     height: '18rem',
   },

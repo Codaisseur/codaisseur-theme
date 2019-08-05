@@ -1,10 +1,8 @@
 import * as React from 'react'
 import SvgIcon from '@material-ui/core/SvgIcon'
 import { primary } from '../themes/default/palette'
-import { makeStyles } from '@material-ui/core'
 
 export const RightArrowIcon = (props: any) => {
-
   return (
     <SvgIcon
       {...props}

@@ -10,8 +10,11 @@ import {
 } from './lib'
 
 // We only have 1 theme, KISS.
-import theme, { Button as StyledButton, ITheme } from './themes/codaisseur'
-
+import theme, {
+  Button as StyledButton,
+  CourseCard as StyledCourseCard,
+  ITheme,
+} from './themes/codaisseur'
 
 /**
  * wrapper of our own custom theme with baselining included.
@@ -65,6 +68,7 @@ export const withRoot = (Component: React.ComponentType<any>) => {
 
 export interface Theme extends ITheme {}
 export const Button = StyledButton
+export const CourseCard = StyledCourseCard
 
 // if index is loaded during API call, we dont want code to run
 // start is in .npmignore, try or fail
