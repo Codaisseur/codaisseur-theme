@@ -4,15 +4,7 @@ import { primary } from '../themes/default/palette'
 import { makeStyles } from '@material-ui/core'
 
 export const RightArrowIcon = (props: any) => {
-  const useStyles = makeStyles(() => ({
-    move: {
-      '&:hover': {
-        left: '10px',
-      },
-    },
-  }))
 
-  const classes = useStyles()
   return (
     <SvgIcon
       {...props}
@@ -25,7 +17,6 @@ export const RightArrowIcon = (props: any) => {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      className={classes.move}
       class="feather feather-arrow-right"
     >
       <line x1="5" y1="12" x2="19" y2="12" />

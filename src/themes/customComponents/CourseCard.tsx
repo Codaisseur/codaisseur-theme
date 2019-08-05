@@ -21,9 +21,9 @@ import {
 const useStyles = makeStyles(() => ({
   arrow: {
     '&:hover': {
-      ['& > span']: {
-        ['& > svg']: {
-          transform: 'translate(10px, 0px)',
+      ['& span']: {
+        ['& svg']: {
+          transform: 'translate(7px, 0px)',
           transition: 'transform .2s ease-in-out',
         },
       },
@@ -37,8 +37,9 @@ const useStyles = makeStyles(() => ({
   },
   image: {
     backgroundRepeat: 'no-repeat',
+    objectFit: 'cover',
     backgroundPosition: 'center center',
-    backgroundSize: 'cover',
+    // backgroundSize: 'cover',
     width: '100%',
     height: '18rem',
   },
@@ -81,7 +82,9 @@ export const CourseCard = (props: ICourseCard) => {
           <Grid container item direction="row" xs={12} className={classes.container}>
             <Grid item className={props.classes} md={academySection ? 8 : 5}>
               <CardMedia>
+                <div style={{backgroundSize: 'cover'}}>
                 <img src={props.image} alt={props.image} className={classes.image} />
+                </div>
               </CardMedia>
             </Grid>
             <Grid
@@ -97,7 +100,7 @@ export const CourseCard = (props: ICourseCard) => {
                 </Typography>
                 <Typography variant="body1">{props.description}</Typography>
                 <Typography variant="body1" className={classes.icons}>
-                  <Grid container item direction="row">
+                  <Grid container item direction="row" xs={12}>
                     <div className={classes.iconDiv}>
                       <span>
                         <ClockIcon />
