@@ -45,7 +45,7 @@ export default createMuiTheme(theme) as ITheme
 // Create custom component
 export const Button = withStyles({
   label: {
-    textTransform: 'lowercase',
+    textTransform: 'uppercase',
   },
 })(MuiButton)
 

@@ -45,7 +45,6 @@ export const MuiCardContent = {
   // node_modules/@material-ui/core/CardContent/CardContent.js
   root: {
     padding: '32px 32px 16px 32px',
-    disableRipple: 'true',
   },
 }
 
@@ -55,10 +54,6 @@ export const MuiCardActions = {
     justifyContent: 'flex-end',
     paddingRight: '32px',
   },
-}
-
-export const MuiPaper = {
-  root: {},
 }
 
 export const MuiTouchRipple = {

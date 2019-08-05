@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from './index'
 import { genTypographys, genButtons, genCards } from './index.stories'
-import { AcademyCard } from './themes/customComponents/AcademyCard'
 
 require('./serviceWorker')
 
@@ -41,16 +40,6 @@ ReactDOM.render(
         {genCards()}
       </>
     ))}
-    <AcademyCard
-      duration={11}
-      title="Code Academy"
-      language="English"
-      date="26 August 2019"
-      price="800"
-      level="No experience needed!"
-      description="Collaborate with others to build and deploy different types of web applications."
-      image="https://www.teacher.org/wp-content/uploads/2018/02/Teachers-Professionals-1024x676.jpg"
-    />
   </ThemeProvider>,
   document.getElementById('root')
 )

@@ -1,16 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { CourseCard } from './themes/customComponents/CourseCard'
 
-import {
-  Button,
-  Card,
-  CardActions,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Typography,
-  Grid,
-} from '@material-ui/core'
+import { Button, Typography } from '@material-ui/core'
 
 export const genButtons = (color: any) => {
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
@@ -50,24 +42,17 @@ export const genTypographys = (color: any) =>
 
 export const genCards = () => {
   return (
-    <Grid item xs={6}>
-      <Card>
-        <CardActionArea>
-          <CardMedia src="https://www.iamexpat.nl/sites/default/files/styles/article--full/public/dutch-school-types.jpg" />
-          <CardContent>
-            <Typography variant="h5">React and Redux Bootcamp</Typography>
-            <Typography variant="overline">Intermediate</Typography>
-            <Typography variant="body1">
-              Collaborate with others to build and deploy different types of web
-              applications.
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button color="default">Learn more -></Button>
-        </CardActions>
-      </Card>
-    </Grid>
+    <CourseCard
+      duration={11}
+      title="Code Academy"
+      language="English"
+      date="26 August 2019"
+      price="800"
+      level="No experience needed!"
+      description="Collaborate with others to build and deploy different types of web applications."
+      image="https://codaisseur-website.cdn.prismic.io/codaisseur-website/79f7c9962dea2344b5e30168a44791eb8396f4db_dsc01428.jpg"
+    />
+    // style={{ backgroundImage: `url(${props.image.small!.url})`,
   )
 }
 
@@ -86,4 +71,4 @@ storiesOf('Override Typography', module)
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
 
-storiesOf('Override Cards', module).add('Main', () => genCards())
+storiesOf('Override Cards', module).add('CourseCard wide', () => genCards())
