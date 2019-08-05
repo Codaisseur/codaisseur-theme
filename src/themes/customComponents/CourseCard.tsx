@@ -20,13 +20,9 @@ import {
 
 const useStyles = makeStyles(() => ({
   arrow: {
-    '&:hover': {
-      ['& span']: {
-        ['& svg']: {
-          transform: 'translate(7px, 0px)',
-          transition: 'transform .2s ease-in-out',
-        },
-      },
+    '&:hover > span > svg': {
+      transform: 'translate(7px, 0px)',
+      transition: 'transform .2s ease-in-out',
     },
   },
   button: {
@@ -81,8 +77,8 @@ export const CourseCard = (props: ICourseCard) => {
           <Grid container item direction="row" xs={12} className={classes.container}>
             <Grid item className={props.classes} md={academySection ? 8 : 5}>
               <CardMedia>
-                <div style={{backgroundSize: 'cover'}}>
-                <img src={props.image} alt={props.image} className={classes.image} />
+                <div style={{ backgroundSize: 'cover' }}>
+                  <img src={props.image} alt={props.image} className={classes.image} />
                 </div>
               </CardMedia>
             </Grid>
