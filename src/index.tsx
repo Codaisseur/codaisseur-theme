@@ -11,7 +11,6 @@ import {
 
 // We only have 1 theme, KISS.
 import theme, { Button as StyledButton, ITheme } from './themes/codaisseur'
-import { ISvgButton } from './icons/svg'
 
 /**
  * wrapper of our own custom theme with baselining included.
@@ -63,7 +62,6 @@ export const withRoot = (Component: React.ComponentType<any>) => {
   }
 }
 
-export interface SvgButton extends ISvgButton {}
 export interface Theme extends ITheme {}
 export const Button = StyledButton
 
