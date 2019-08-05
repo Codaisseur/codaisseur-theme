@@ -32,12 +32,12 @@ ReactDOM.render(
         {genButtons(color)}
       </>
     ))}
-    {['main'].map(() => (
+    {['Academy', 'Bootcamp'].map((type: string) => (
       <>
         <div style={{ border: '5px solid black' }}>
-          <h1>Cards</h1>
+          <h1>{type} Cards</h1>
         </div>
-        {genCards()}
+        {genCards(type)}
       </>
     ))}
   </ThemeProvider>,

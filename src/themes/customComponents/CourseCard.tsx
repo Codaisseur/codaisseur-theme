@@ -5,6 +5,8 @@ import { CalendarIcon } from '../../icons/calendar'
 import { GlobeIcon } from '../../icons/globe'
 import { RightArrowIcon } from '../../icons/arrowRight'
 import { Button } from '../codaisseur/index'
+import { grey } from '../default/palette'
+import classnames from 'classnames'
 
 import {
   Card,
@@ -14,21 +16,34 @@ import {
   Typography,
   makeStyles,
   Grid,
-  Box,
 } from '@material-ui/core'
 
-const useStyles = makeStyles(({ palette }) => ({
+const useStyles = makeStyles(() => ({
+  button: {
+    textAlign: 'right',
+  },
   container: {
     flexGrow: 1,
   },
   image: {
     backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
     width: '100%',
+    maxWidth: '100%',
     height: '18rem',
-    backgroundSize: 'contain',
-    backgroundPosition: 'center',
-    display: 'flex',
     flexFlow: 'row nowrap',
+  },
+  icons: {
+    color: grey[500],
+    marginTop: '4%',
+  },
+  iconDiv: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  iconSpacing: {
+    marginLeft: '10%',
   },
 }))
 
@@ -44,43 +59,67 @@ export interface ICourseCard {
   price: string
   date: string
   level: any
+  type?: string
 }
 
 export const CourseCard = (props: ICourseCard) => {
   const classes = useStyles()
+  const academySection = props.type === 'Academy'
+
   return (
-    <Card className={props.classes}>
-      <CardActionArea className={props.classes}>
-        <Grid container item xs={12} className={classes.container}>
-          <Grid item className={props.classes} md={8}>
-            <CardMedia>
-              <img src={props.image} alt={props.image} className={classes.image} />
-            </CardMedia>
+    <Grid container item xs={12} md={academySection ? 12 : 6}>
+      <Card className={props.classes}>
+        <CardActionArea className={props.classes}>
+          <Grid container item direction="row" xs={12} className={classes.container}>
+            <Grid item className={props.classes} md={academySection ? 8 : 5}>
+              <CardMedia>
+                <img src={props.image} alt={props.image} className={classes.image} />
+              </CardMedia>
+            </Grid>
+            <Grid
+              item
+              className={props.classes}
+              md={academySection ? 4 : 7}
+              direction="column"
+            >
+              <CardContent className={props.classes}>
+                <Typography variant="h5">{props.title}</Typography>
+                <Typography variant="overline" style={{ color: props.color }}>
+                  {props.level}
+                </Typography>
+                <Typography variant="body1">{props.description}</Typography>
+                <Typography variant="body1" className={classes.icons}>
+                  <Grid container item direction="row">
+                    <div className={classes.iconDiv}>
+                      <span>
+                        <ClockIcon />
+                        {props.duration} weeks
+                      </span>
+                      <span>
+                        <CalendarIcon /> {props.date}
+                      </span>
+                    </div>
+                    <div className={classnames(classes.iconSpacing, classes.iconDiv)}>
+                      <span>
+                        <TagIcon /> {props.price}€
+                      </span>
+                      <span>
+                        <GlobeIcon /> {props.language}
+                      </span>
+                    </div>
+                  </Grid>
+                </Typography>
+              </CardContent>
+              <div className={classes.button}>
+                <Button variant="text">
+                  LEARN MORE
+                  <RightArrowIcon />
+                </Button>
+              </div>
+            </Grid>
           </Grid>
-          <Grid item className={props.classes} md={4} direction="column">
-            <CardContent className={props.classes}>
-              <Typography variant="h5">{props.title}</Typography>
-              <Typography variant="overline">{props.level}</Typography>
-              <Typography variant="body1">{props.description}</Typography>
-              <Typography variant="body1" color="initial">
-                <Box>
-                  <ClockIcon />
-                  {props.duration} weeks
-                  <TagIcon /> {props.price}€
-                </Box>
-                <Box>
-                  <CalendarIcon /> {props.date}
-                  <GlobeIcon /> {props.language}
-                </Box>
-              </Typography>
-            </CardContent>
-            <Button variant="text">
-              LEARN MORE
-              <RightArrowIcon />
-            </Button>
-          </Grid>
-        </Grid>
-      </CardActionArea>
-    </Card>
+        </CardActionArea>
+      </Card>
+    </Grid>
   )
 }

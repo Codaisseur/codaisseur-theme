@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { CourseCard } from './themes/customComponents/CourseCard'
 
 import { Button, Typography } from '@material-ui/core'
+import { primary } from './themes/default/palette'
 
 export const genButtons = (color: any) => {
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
@@ -40,19 +41,23 @@ export const genTypographys = (color: any) =>
     </div>
   ))
 
-export const genCards = () => {
+export const genCards = (type: any) => {
   return (
-    <CourseCard
-      duration={11}
-      title="Code Academy"
-      language="English"
-      date="26 August 2019"
-      price="800"
-      level="No experience needed!"
-      description="Collaborate with others to build and deploy different types of web applications."
-      image="https://codaisseur-website.cdn.prismic.io/codaisseur-website/79f7c9962dea2344b5e30168a44791eb8396f4db_dsc01428.jpg"
-    />
-    // style={{ backgroundImage: `url(${props.image.small!.url})`,
+    <div>
+      <CourseCard
+        duration={11}
+        color={primary.main}
+        title="Code Academy"
+        language="English"
+        date="26 August 2019"
+        price="800"
+        type={type}
+        level="No experience needed!"
+        description="Collaborate with others to build and deploy different types of web applications."
+        image="https://codaisseur-website.cdn.prismic.io/codaisseur-website/79f7c9962dea2344b5e30168a44791eb8396f4db_dsc01428.jpg"
+      />
+      {/* style={{ backgroundImage: `url(${props.image.small!.url})`}}, */}
+    </div>
   )
 }
 
@@ -71,4 +76,6 @@ storiesOf('Override Typography', module)
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
 
-storiesOf('Override Cards', module).add('CourseCard wide', () => genCards())
+storiesOf('Override Cards', module)
+.add('CourseCard wide', () => genCards('Academy'))
+.add('CourseCard small', () => genCards('Bootcamp'))
