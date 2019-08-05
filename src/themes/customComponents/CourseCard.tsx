@@ -19,6 +19,16 @@ import {
 } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
+  arrow: {
+    '&:hover': {
+      ['& > span']: {
+        ['& > svg']: {
+          transform: 'translate(10px, 0px)',
+          transition: 'transform .2s ease-in-out',
+        },
+      },
+    },
+  },
   button: {
     textAlign: 'right',
   },
@@ -27,12 +37,10 @@ const useStyles = makeStyles(() => ({
   },
   image: {
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
     backgroundPosition: 'center center',
+    backgroundSize: 'cover',
     width: '100%',
-    maxWidth: '100%',
     height: '18rem',
-    flexFlow: 'row nowrap',
   },
   icons: {
     color: grey[500],
@@ -111,7 +119,7 @@ export const CourseCard = (props: ICourseCard) => {
                 </Typography>
               </CardContent>
               <div className={classes.button}>
-                <Button variant="text">
+                <Button variant="text" className={classes.arrow}>
                   LEARN MORE
                   <RightArrowIcon />
                 </Button>
