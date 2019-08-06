@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from './index'
-import { genTypographys, genButtons } from './index.stories'
+import { genTypographys, genButtons, genCards } from './index.stories'
+
 require('./serviceWorker')
 
 ReactDOM.render(
@@ -29,6 +30,14 @@ ReactDOM.render(
           <h1>Buttons {color}</h1>
         </div>
         {genButtons(color)}
+      </>
+    ))}
+    {['Academy', 'Bootcamp'].map((type: string) => (
+      <>
+        <div style={{ border: '5px solid black' }}>
+          <h1>{type} Cards</h1>
+        </div>
+        {genCards(type)}
       </>
     ))}
   </ThemeProvider>,

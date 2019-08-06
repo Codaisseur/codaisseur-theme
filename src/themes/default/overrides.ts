@@ -1,6 +1,4 @@
 // Override of base components of MUI.
-// Using this instead of making our own custom components, we don't even need to modify our existing code base (except for using this theme provider)
-// Using root: {} you override every variant, outside of root you only modify the 'default' variant.
 import { secondary } from './palette'
 export const MuiButtonBase = {
   // node_modules/@material-ui/core/ButtonBase/ButtonBase.js
@@ -47,7 +45,6 @@ export const MuiCardContent = {
   // node_modules/@material-ui/core/CardContent/CardContent.js
   root: {
     padding: '32px 32px 16px 32px',
-    disableRipple: 'true',
   },
 }
 
@@ -57,10 +54,6 @@ export const MuiCardActions = {
     justifyContent: 'flex-end',
     paddingRight: '32px',
   },
-}
-
-export const MuiPaper = {
-  root: {},
 }
 
 export const MuiTouchRipple = {

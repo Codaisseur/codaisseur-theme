@@ -4,6 +4,7 @@ import { Button as MuiButton } from '@material-ui/core'
 import { palette, typography, overrides } from '../default'
 import { IPalette } from '../default/palette'
 import { ITypography } from '../default/typography'
+import { CourseCard as CustomCourseCard } from '../customComponents/CourseCard'
 
 export interface ITheme extends Theme {
   // Custom
@@ -45,9 +46,11 @@ export default createMuiTheme(theme) as ITheme
 // Create custom component
 export const Button = withStyles({
   label: {
-    textTransform: 'capitalize',
+    textTransform: 'uppercase',
   },
 })(MuiButton)
+
+export const CourseCard = withStyles({})(CustomCourseCard)
 
 // export const Card = withStyles({})(MuiCard)
 // export const CardContent = withStyles({})(MuiCardContent)

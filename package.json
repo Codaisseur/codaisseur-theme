@@ -1,6 +1,6 @@
 {
   "name": "@codaisseur/theme",
-  "version": "0.4.15",
+  "version": "0.4.16",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,9 @@
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^4.3.0",
+    "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.0",
+    "@types/classnames": "^2.2.9",
     "jss": "^10.0.0-alpha.23",
     "jss-plugin-extend": "^10.0.0-alpha.23",
     "react": "^16.8.6"
