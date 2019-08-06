@@ -53,10 +53,9 @@ export const genCards = (type: any) => {
         price="800"
         type={type}
         level="No experience needed!"
-        description="Collaborate with others to build and deploy different types of web applications."
+        description="Our intensive 11 week Javascript curriculum will set you up for success as a full-stack developer. You will learn how to build complex websites, and even multiplayer games with databases, APIs, and modern front-end technology."
         image="https://codaisseur-website.cdn.prismic.io/codaisseur-website/79f7c9962dea2344b5e30168a44791eb8396f4db_dsc01428.jpg"
       />
-      {/* style={{ backgroundImage: `url(${props.image.small!.url})`}}, */}
     </div>
   )
 }
