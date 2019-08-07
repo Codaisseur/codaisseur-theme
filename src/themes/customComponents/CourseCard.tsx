@@ -77,13 +77,6 @@ export interface ICourseCard {
   type?: string
 }
 
-const limitText = (text: string, type: string | undefined) => {
-  if (type === 'Academy' || text.length < 226) {
-    return text
-  }
-  return `${text.substr(0, 225)}...`
-}
-
 export const CourseCard = (props: ICourseCard) => {
   const classes = useStyles()
   const academySection = props.type === 'Academy'
@@ -113,9 +106,7 @@ export const CourseCard = (props: ICourseCard) => {
                 <Typography variant="overline" style={{ color: props.color }}>
                   {props.level}
                 </Typography>
-                <Typography variant="body1">
-                  {limitText(props.description, props.type)}
-                </Typography>
+                <Typography variant="body1">{props.description}</Typography>
                 <Typography variant="body1" className={classes.icons}>
                   <Grid container item direction="row" xs={12}>
                     <div className={classes.iconDiv}>
