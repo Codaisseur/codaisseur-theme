@@ -3,6 +3,7 @@ import { Button as MuiButton } from '@material-ui/core'
 
 import { palette, typography, overrides } from '../default'
 import { IPalette } from '../default/palette'
+import { IBreakpoints } from '../default/breakpoints'
 import { ITypography } from '../default/typography'
 import {
   CourseCard as CustomCourseCard,
@@ -10,12 +11,8 @@ import {
 } from '../customComponents/CourseCard'
 
 export interface ITheme extends Theme {
-  // Custom
   palette: IPalette
-
-  // Rest
-  // shape: Shape
-  // breakpoints: Breakpoints
+  breakpoints: IBreakpoints
   // direction: Direction
   // mixins: Mixins
   // overrides?: Overrides
@@ -23,7 +20,7 @@ export interface ITheme extends Theme {
   // shadows: Shadows
   // spacing: Spacing
   // transitions: Transitions
-  // typography: Typography
+  typography: ITypography
   // zIndex: ZIndex
 }
 
@@ -31,6 +28,10 @@ export const theme = {
   palette: {
     ...palette,
   } as IPalette,
+
+  // breakpoints: {
+  //   ...breakpoints,
+  // } as IBreakpoints,
 
   typography: {
     ...typography,
