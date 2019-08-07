@@ -31,7 +31,8 @@ function convertBreakpoints(breakpoint: any) {
     return breakpointValues.xl
   }
 }
-const breakpoints: Breakpoints = {
+
+export const breakpoints: Breakpoints = {
   values: breakpointValues,
   keys: [xs, sm, md, lg, xl],
   up: (key: any) => {
@@ -58,4 +59,5 @@ const breakpoints: Breakpoints = {
   only: () => '',
   width: () => 0,
 }
-export default breakpoints
+
+export interface IBreakpoints extends Breakpoints {}

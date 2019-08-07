@@ -1,6 +1,6 @@
 import { common } from './palette'
 import { Typography, TypographyStyle } from '@material-ui/core/styles/createTypography'
-import breakpoints from './breakpoints'
+import { breakpoints } from './breakpoints'
 
 const color = common.font
 

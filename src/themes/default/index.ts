@@ -10,6 +10,7 @@ import {
 } from './palette'
 
 import * as defaultTypography from './typography'
+import * as defaultBreakpoints from './breakpoints'
 import * as defaultOverrides from './overrides'
 
 export const palette = {
@@ -44,6 +45,10 @@ export const palette = {
 
 export const typography = {
   ...defaultTypography,
+}
+
+export const breakpoints = {
+  ...defaultBreakpoints,
 }
 
 export const overrides = {

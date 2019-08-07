@@ -6,7 +6,7 @@ import { GlobeIcon } from '../../icons/globe'
 import { RightArrowIcon } from '../../icons/arrowRight'
 import { Button } from '../codaisseur/index'
 import { grey } from '../default/palette'
-import breakpoints from '../default/breakpoints'
+import { breakpoints } from '../default/breakpoints'
 import classnames from 'classnames'
 
 import {
@@ -71,7 +71,7 @@ export interface ICourseCard {
   style?: any
   title?: string
   language?: string
-  price?: string
+  price?: string | number
   date?: string
   level?: any
   type?: string
