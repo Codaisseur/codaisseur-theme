@@ -13,6 +13,7 @@ import {
 import theme, {
   Button as StyledButton,
   CourseCard as StyledCourseCard,
+  ICourseCard as ICustomCourseCard,
   ITheme,
 } from './themes/codaisseur'
 
@@ -69,7 +70,8 @@ export const withRoot = (Component: React.ComponentType<any>) => {
 export interface Theme extends ITheme {}
 export const Button = StyledButton
 export const CourseCard = StyledCourseCard
+export interface ICourseCard extends ICustomCourseCard {}
 
 // if index is loaded during API call, we dont want code to run
 // start is in .npmignore, try or fail
-import('./start').catch(() => ({}))
+// import('./start').catch(() => ({}))

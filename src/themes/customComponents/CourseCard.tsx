@@ -12,7 +12,6 @@ import breakpoints from '../default/breakpoints'
 import {
   Card,
   CardActionArea,
-  CardMedia,
   CardContent,
   Typography,
   makeStyles,
@@ -57,7 +56,7 @@ const useStyles = makeStyles(() => ({
 export interface ICourseCard {
   image?: string
   duration?: number
-  description?: string
+  description?: string | JSX.Element | any
   landingPageUrl?: string
   color?: string
   classes?: any

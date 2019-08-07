@@ -44,7 +44,7 @@ const breakpoints: Breakpoints = {
     const value = valueNumber.toString()
     return '@media (max-width:'.concat(value).concat('px', ')')
   },
-  between: (start: string, end: any) => {
+  between: (start: any, end: any) => {
     const valueNumberStart = typeof start === 'string' ? convertBreakpoints(start) : start
     const valueNumberEnd = typeof end === 'string' ? convertBreakpoints(end) : end
 
