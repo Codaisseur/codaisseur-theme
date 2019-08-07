@@ -2,8 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { CourseCard } from './themes/customComponents/CourseCard'
 
-import { Button, Typography } from '@material-ui/core'
-import { primary } from './themes/default/palette'
+import { Button, Typography, Grid } from '@material-ui/core'
+import { primary, secondary } from './themes/default/palette'
 
 export const genButtons = (color: any) => {
   return ['text', 'outlined', 'contained'].map((variant: any, key) => (
@@ -43,7 +43,7 @@ export const genTypographys = (color: any) =>
 
 export const genCards = (type: any) => {
   return (
-    <div>
+    <Grid container>
       <CourseCard
         duration={11}
         color={primary.main}
@@ -56,7 +56,19 @@ export const genCards = (type: any) => {
         description="Our intensive 11 week Javascript curriculum will set you up for success as a full-stack developer. You will learn how to build complex websites, and even multiplayer games with databases, APIs, and modern front-end technology."
         image="https://codaisseur-website.cdn.prismic.io/codaisseur-website/79f7c9962dea2344b5e30168a44791eb8396f4db_dsc01428.jpg"
       />
-    </div>
+      <CourseCard
+        duration={11}
+        color={secondary.main}
+        title="Code Academy Bootcamp"
+        language="English"
+        date="5 September 2019"
+        price="800"
+        type={type}
+        level="Beginner Bootcamp"
+        description="Our intensive 11 week Javascript curriculum will set you up for success as a full-stack developer. You will learn how to build complex websites, and even multiplayer games with databases, APIs, and modern front-end technology. Our intensive 11 week Javascript curriculum will set you up for success as a full-stack developer."
+        image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F45851e60-1247-424f-bebd-d60f382f10b8_dsc02017.jpg"
+      />
+    </Grid>
   )
 }
 
@@ -76,5 +88,5 @@ storiesOf('Override Typography', module)
   .add('Error', () => genTypographys('error'))
 
 storiesOf('Override Cards', module)
-.add('CourseCard wide', () => genCards('Academy'))
-.add('CourseCard small', () => genCards('Bootcamp'))
+  .add('CourseCard wide', () => genCards('Academy'))
+  .add('CourseCard small', () => genCards('Bootcamp'))
