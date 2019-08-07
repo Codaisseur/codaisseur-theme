@@ -1,24 +1,25 @@
 import * as React from 'react'
 import SvgIcon from '@material-ui/core/SvgIcon'
-import { primary } from '../themes/default/palette'
+import { secondary } from '../themes/default/palette'
 
 export const RightArrowIcon = (props: any) => {
   return (
     <SvgIcon
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={primary.main}
+      stroke={secondary.main}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
       class="feather feather-arrow-right"
+      {...props}
     >
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
+      <g>
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <polyline points="12 5 19 12 12 19" />
+      </g>
     </SvgIcon>
   )
 }
