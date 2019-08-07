@@ -6,8 +6,8 @@ import { GlobeIcon } from '../../icons/globe'
 import { RightArrowIcon } from '../../icons/arrowRight'
 import { Button } from '../codaisseur/index'
 import { grey } from '../default/palette'
-import classnames from 'classnames'
 import breakpoints from '../default/breakpoints'
+import classnames from 'classnames'
 
 import {
   Card,
@@ -50,6 +50,14 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     marginLeft: '20px',
+    [breakpoints.down(1130)]: {
+      marginLeft: '10px',
+    },
+  },
+  iconSpacing: {
+    [breakpoints.down('sm')]: {
+      marginLeft: '10%',
+    },
   },
 }))
 
@@ -107,7 +115,7 @@ export const CourseCard = (props: ICourseCard) => {
                         <CalendarIcon /> {props.date}
                       </span>
                     </div>
-                    <div className={classes.iconDiv}>
+                    <div className={classnames(classes.iconDiv, classes.iconSpacing)}>
                       <span>
                         <TagIcon /> {props.price}€
                       </span>
