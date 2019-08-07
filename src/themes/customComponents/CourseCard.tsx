@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => ({
     textAlign: 'right',
   },
   container: {
-    flexGrow: 1,
+    margin: 0,
   },
   image: {
     backgroundColor: '#333',
@@ -39,7 +39,7 @@ const useStyles = makeStyles(() => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     width: '100%',
-    minHeight: '18rem',
+    minHeight: '16rem',
     height: 'auto',
   },
   icons: {
@@ -62,12 +62,13 @@ const useStyles = makeStyles(() => ({
 }))
 
 export interface ICourseCard {
-  image?: string
+  image?: string | any
   duration?: number
   description?: string | JSX.Element | any
   landingPageUrl?: string
   color?: string
   classes?: any
+  style?: any
   title?: string
   language?: string
   price?: string
@@ -76,35 +77,45 @@ export interface ICourseCard {
   type?: string
 }
 
+const limitText = (text: string, type: string | undefined) => {
+  if (type === 'Academy' || text.length < 226) {
+    return text
+  }
+  return `${text.substr(0, 225)}...`
+}
+
 export const CourseCard = (props: ICourseCard) => {
   const classes = useStyles()
   const academySection = props.type === 'Academy'
 
   return (
     <Grid container item xs={12} md={academySection ? 12 : 6}>
-      <Card className={props.classes}>
-        <CardActionArea className={props.classes}>
-          <Grid container item className={classes.container}>
+      <Card className={classes.container}>
+        <CardActionArea>
+          <Grid container item>
             <Grid
               xs={12}
               item
-              md={academySection ? 8 : 5}
+              md={academySection ? 8 : 12}
+              lg={academySection ? 8 : 5}
               className={classes.image}
               style={{ backgroundImage: `url(${props.image})` }}
             />
             <Grid
               xs={12}
               item
-              md={academySection ? 4 : 7}
-              className={props.classes}
+              md={academySection ? 4 : 12}
+              lg={academySection ? 4 : 7}
               direction="column"
             >
-              <CardContent className={props.classes}>
+              <CardContent>
                 <Typography variant="h5">{props.title}</Typography>
                 <Typography variant="overline" style={{ color: props.color }}>
                   {props.level}
                 </Typography>
-                <Typography variant="body1">{props.description}</Typography>
+                <Typography variant="body1">
+                  {limitText(props.description, props.type)}
+                </Typography>
                 <Typography variant="body1" className={classes.icons}>
                   <Grid container item direction="row" xs={12}>
                     <div className={classes.iconDiv}>
