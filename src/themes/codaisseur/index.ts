@@ -1,7 +1,7 @@
 import { createMuiTheme, withStyles, Theme } from '@material-ui/core/styles'
 import { Button as MuiButton } from '@material-ui/core'
 
-import { palette, typography, overrides, breakpoints } from '../default'
+import { palette, typography, overrides } from '../default'
 import { IPalette } from '../default/palette'
 import { IBreakpoints } from '../default/breakpoints'
 import { ITypography } from '../default/typography'
