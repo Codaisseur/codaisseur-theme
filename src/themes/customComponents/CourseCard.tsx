@@ -7,7 +7,6 @@ import { RightArrowIcon } from '../../icons/arrowRight'
 import { Button } from '../codaisseur/index'
 import { grey } from '../default/palette'
 import { breakpoints } from '../default/breakpoints'
-import classnames from 'classnames'
 
 import {
   Card,
@@ -17,9 +16,8 @@ import {
   makeStyles,
   Grid,
 } from '@material-ui/core'
-import { spacing } from '@material-ui/system'
 
-const useStyles = makeStyles(({ spacing }) => ({
+const useStyles = makeStyles(() => ({
   arrow: {
     '&:hover > span > svg': {
       transform: 'translate(7px, 0px)',
