@@ -7,7 +7,6 @@ import { RightArrowIcon } from '../../icons/arrowRight'
 import { Button } from '../codaisseur/index'
 import { grey } from '../default/palette'
 import { breakpoints } from '../default/breakpoints'
-import classnames from 'classnames'
 
 import {
   Card,
@@ -44,6 +43,9 @@ const useStyles = makeStyles(() => ({
     minHeight: '20rem',
     height: 'auto',
   },
+  icon: {
+    verticalAlign: 'bottom',
+  },
   icons: {
     color: grey[500],
     marginTop: '4%',
@@ -57,9 +59,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   iconSpacing: {
-    [breakpoints.down('sm')]: {
-      marginLeft: '10%',
-    },
+    margin: '8px 0',
   },
 }))
 
@@ -112,23 +112,23 @@ export const CourseCard = (props: ICourseCard) => {
                   {props.description}
                 </Typography>
                 <Typography variant="body1" className={classes.icons}>
-                  <Grid container item direction="row" xs={12}>
-                    <div className={classes.iconDiv}>
-                      <span>
-                        <ClockIcon /> {props.duration} weeks
-                      </span>
-                      <span>
-                        <CalendarIcon /> {props.date}
-                      </span>
-                    </div>
-                    <div className={classnames(classes.iconDiv, classes.iconSpacing)}>
-                      <span>
-                        <TagIcon /> {props.price}€
-                      </span>
-                      <span>
-                        <GlobeIcon /> {props.language}
-                      </span>
-                    </div>
+                  <Grid container xs={12} spacing={4} justify="space-evenly">
+                    <Grid item xs="auto">
+                      <Grid item xs={12} className={classes.iconSpacing}>
+                        <ClockIcon className={classes.icon} /> {props.duration} weeks
+                      </Grid>
+                      <Grid item xs={12}>
+                        <TagIcon className={classes.icon} /> {props.price}€
+                      </Grid>
+                    </Grid>
+                    <Grid item xs="auto">
+                      <Grid item xs={12} className={classes.iconSpacing}>
+                        <CalendarIcon className={classes.icon} /> {props.date}
+                      </Grid>
+                      <Grid item xs={12}>
+                        <GlobeIcon className={classes.icon} /> {props.language}
+                      </Grid>
+                    </Grid>
                   </Grid>
                 </Typography>
               </CardContent>

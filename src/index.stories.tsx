@@ -49,7 +49,7 @@ export const genCards = (type: any) => {
         color={primary.main}
         title="Code Academy"
         language="English"
-        date="26 August 2019"
+        date="26 Aug 2019"
         price="800"
         type={type}
         level="No experience needed!"
@@ -61,7 +61,7 @@ export const genCards = (type: any) => {
         color={secondary.main}
         title="Code Academy Bootcamp"
         language="English"
-        date="5 September 2019"
+        date="5 Sept 2019"
         price="800"
         type={type}
         level="Beginner Bootcamp"
