@@ -4,24 +4,12 @@ import { grey } from '../themes/default/palette'
 
 export const CalendarIcon = (props: any) => {
   return (
-    <SvgIcon
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={grey[500]}
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-calendar"
-      {...props}
-    >
-      <g>
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
-      </g>
+    <SvgIcon width="24" height="24" viewBox="0 0 24 24" {...props}>
+      <path fill="none" d="M0 0h24v24H0V0z" />
+      <path
+        fill={grey[500]}
+        d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z"
+      />
     </SvgIcon>
   )
 }

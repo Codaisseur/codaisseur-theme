@@ -23,23 +23,25 @@ const useStyles = makeStyles(() => ({
     '&:hover > span > svg': {
       transform: 'translate(7px, 0px)',
       transition: 'transform .2s ease-in-out',
-      stroke: 'blue',
     },
   },
   button: {
     textAlign: 'right',
   },
   container: {
-    margin: 0,
+    margin: '5px',
+  },
+  description: {
+    textAlign: 'justify',
   },
   image: {
-    backgroundColor: '#333',
     backgroundRepeat: 'no-repeat',
     objectFit: 'cover',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     width: '100%',
-    minHeight: '16rem',
+    minHeight: '21rem',
+    maxHeight: '25rem',
     height: 'auto',
   },
   icons: {
@@ -63,7 +65,7 @@ const useStyles = makeStyles(() => ({
 
 export interface ICourseCard {
   image?: string | any
-  duration?: number
+  duration?: number | any
   description?: string | JSX.Element | any
   landingPageUrl?: string
   color?: string
@@ -72,7 +74,7 @@ export interface ICourseCard {
   title?: string
   language?: string
   price?: string | number
-  date?: string
+  date?: string | any
   level?: any
   type?: string
 }
@@ -106,7 +108,9 @@ export const CourseCard = (props: ICourseCard) => {
                 <Typography variant="overline" style={{ color: props.color }}>
                   {props.level}
                 </Typography>
-                <Typography variant="body1">{props.description}</Typography>
+                <Typography variant="body1" className={classes.description}>
+                  {props.description}
+                </Typography>
                 <Typography variant="body1" className={classes.icons}>
                   <Grid container item direction="row" xs={12}>
                     <div className={classes.iconDiv}>
