@@ -141,7 +141,7 @@ export const caption: TypographyStyle = {
 
 export const overline: TypographyStyle = {
   fontFamily,
-  fontWeight: 700 || 'bold',
+  fontWeight: 500 || 'normal',
   fontSize: '10px',
   lineHeight: 16 / 10,
   letterSpacing: 1.5,
