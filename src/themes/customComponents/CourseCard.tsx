@@ -40,8 +40,7 @@ const useStyles = makeStyles(() => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     width: '100%',
-    minHeight: '21rem',
-    maxHeight: '25rem',
+    minHeight: '20rem',
     height: 'auto',
   },
   icons: {
@@ -67,16 +66,16 @@ export interface ICourseCard {
   image?: string | any
   duration?: number | any
   description?: string | JSX.Element | any
-  landingPageUrl?: string
-  color?: string
+  landingPageUrl?: string | any
+  color?: string | any
   classes?: any
   style?: any
-  title?: string
-  language?: string
+  title?: string | any
+  language?: string | any
   price?: string | number
   date?: string | any
   level?: any
-  type?: string
+  type?: string | any
 }
 
 export const CourseCard = (props: ICourseCard) => {
