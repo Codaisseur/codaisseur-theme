@@ -36,7 +36,7 @@ export const MuiButton = {
 export const MuiCard = {
   // node_modules/@material-ui/core/Card/Card.js
   root: {
-    boxShadow: '4px 0px 40px rgba(0, 0, 0, 0.25)',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
     borderRadius: '8px',
   },
 }

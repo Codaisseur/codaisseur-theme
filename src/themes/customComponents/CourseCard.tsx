@@ -33,6 +33,7 @@ const useStyles = makeStyles(() => ({
   },
   description: {
     textAlign: 'justify',
+    marginTop: '10px',
   },
   image: {
     backgroundRepeat: 'no-repeat',
