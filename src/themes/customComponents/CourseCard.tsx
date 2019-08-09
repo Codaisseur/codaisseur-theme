@@ -58,6 +58,11 @@ const useStyles = makeStyles(() => ({
       marginLeft: '10px',
     },
   },
+  iconsLayout: {
+    [breakpoints.down('md')]: {
+      justifyContent: 'flex-start',
+    },
+  },
   iconSpacing: {
     margin: '8px 0',
   },
@@ -91,7 +96,7 @@ export const CourseCard = (props: ICourseCard) => {
             <Grid
               xs={12}
               item
-              md={academySection ? 8 : 12}
+              md={academySection ? 7 : 12}
               lg={academySection ? 8 : 5}
               className={classes.image}
               style={{ backgroundImage: `url(${props.image})` }}
@@ -99,7 +104,7 @@ export const CourseCard = (props: ICourseCard) => {
             <Grid
               xs={12}
               item
-              md={academySection ? 4 : 12}
+              md={academySection ? 5 : 12}
               lg={academySection ? 4 : 7}
               direction="column"
             >
@@ -112,8 +117,14 @@ export const CourseCard = (props: ICourseCard) => {
                   {props.description}
                 </Typography>
                 <Typography variant="body1" className={classes.icons}>
-                  <Grid container xs={12} spacing={4} justify="space-evenly">
-                    <Grid item xs="auto">
+                  <Grid
+                    container
+                    xs={12}
+                    spacing={4}
+                    justify="space-evenly"
+                    className={classes.iconsLayout}
+                  >
+                    <Grid item xs="auto" >
                       <Grid item xs={12} className={classes.iconSpacing}>
                         <ClockIcon className={classes.icon} /> {props.duration} weeks
                       </Grid>
