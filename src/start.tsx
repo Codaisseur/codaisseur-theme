@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from './index'
-import { genTypographys, genButtons, genCards } from './index.stories'
+import { genTypographys, genButtons, genCards, genPeople } from './index.stories'
 
 require('./serviceWorker')
 
@@ -40,6 +40,12 @@ ReactDOM.render(
         {genCards(type)}
       </>
     ))}
+    <>
+      <div style={{ border: '5px solid black' }}>
+        <h1>People Cards</h1>
+      </div>
+      {genPeople()}
+    </>
   </ThemeProvider>,
   document.getElementById('root')
 )

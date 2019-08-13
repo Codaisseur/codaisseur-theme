@@ -124,7 +124,7 @@ export const CourseCard = (props: ICourseCard) => {
                     justify="space-evenly"
                     className={classes.iconsLayout}
                   >
-                    <Grid item xs="auto" >
+                    <Grid item xs="auto">
                       <Grid item xs={12} className={classes.iconSpacing}>
                         <ClockIcon className={classes.icon} /> {props.duration} weeks
                       </Grid>

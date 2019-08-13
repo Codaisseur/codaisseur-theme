@@ -17,7 +17,8 @@
     "@types/classnames": "^2.2.9",
     "jss": "^10.0.0-alpha.23",
     "jss-plugin-extend": "^10.0.0-alpha.23",
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "react-social-icons": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

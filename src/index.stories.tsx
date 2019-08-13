@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { CourseCard } from './themes/customComponents/CourseCard'
+import { PeopleCard } from './themes/customComponents/PeopleCard'
 
 import { Button, Typography, Grid } from '@material-ui/core'
 import { primary, secondary } from './themes/default/palette'
@@ -71,6 +72,22 @@ export const genCards = (type: any) => {
     </Grid>
   )
 }
+export const genPeople = () => {
+  return (
+    <Grid container>
+      <PeopleCard
+        name="Pinco Pallino"
+        content="full stack or frontend or backend"
+        image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6400efc3-67c6-418a-ac90-5deafc590e8a_irene+dn.jpg"
+      />
+      <PeopleCard
+        name="Pinco Miloud"
+        content="full stack"
+        image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F3fb93f49-3630-4b09-8e17-b2b997131c12_profielfoto+%3C1mb.jpg"
+      />
+    </Grid>
+  )
+}
 
 storiesOf('Override Buttons', module)
   .add('Primary', () => genButtons('primary'))
@@ -87,6 +104,7 @@ storiesOf('Override Typography', module)
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
 
-storiesOf('Override Cards', module)
+storiesOf('Cards', module)
   .add('CourseCard wide', () => genCards('Academy'))
   .add('CourseCard small', () => genCards('Bootcamp'))
+  .add('PeopleCard', () => genPeople())

@@ -11,9 +11,6 @@ export const MuiButton = {
     borderRadius: '2rem',
     padding: '14px 22px',
   },
-  newStylesFn: {
-    textTransform: 'uppercase',
-  },
   contained: {
     boxShadow: '4px 0px 2px rgba(0, 0, 0, 0.05)',
     disableRipple: 'true',
