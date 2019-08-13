@@ -77,12 +77,12 @@ export const genPeople = () => {
     <Grid container>
       <PeopleCard
         name="Pinco Pallino"
-        content="full stack or frontend or backend"
+        content="Backend or Front-end Development"
         image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6400efc3-67c6-418a-ac90-5deafc590e8a_irene+dn.jpg"
       />
       <PeopleCard
         name="Pinco Miloud"
-        content="full stack"
+        content="Backend Development"
         image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F3fb93f49-3630-4b09-8e17-b2b997131c12_profielfoto+%3C1mb.jpg"
       />
     </Grid>

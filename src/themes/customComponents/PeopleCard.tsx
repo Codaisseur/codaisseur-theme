@@ -2,18 +2,19 @@ import React from 'react'
 import { GithubIcon } from '../../icons/github'
 import { LinkedinIcon } from '../../icons/linkedin'
 import { WebsiteIcon } from '../../icons/website'
-
+import Center from './Center'
 
 import {
   Card,
   CardActionArea,
   CardContent,
   Typography,
-  Avatar,
   makeStyles,
   Grid,
   CardActions,
 } from '@material-ui/core'
+
+import Avatar from './Avatar'
 
 const useStyles = makeStyles(() => ({}))
 
@@ -31,19 +32,17 @@ export interface IPeopleCard {
 export const PeopleCard = (props: IPeopleCard) => {
   const classes = useStyles()
   return (
-    <Grid container item xs={12}>
+    <Grid item xs={12} sm={6} md={2} lg={1} xl={1}>
       <Card>
         <CardActionArea>
-          <Grid item xs={12}>
-            <Avatar src={props.image} />
-          </Grid>
+          <Center>
+            <Avatar size="100px">
+              <img src={props.image} />
+            </Avatar>
+          </Center>
           <CardContent component="div">
-            {props.name && (
-              <div>
-                <p>{props.name}</p>
-              </div>
-            )}
-            {props.content && <p>{props.content}</p>}
+            {props.name && <Typography variant="body2">{props.name}</Typography>}
+            {props.content && <Typography variant="caption">{props.content}</Typography>}
           </CardContent>
           <CardActions>
             <CardActions>
