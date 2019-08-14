@@ -57,6 +57,7 @@ export interface IPeopleCard {
   linkedin?: any
   github?: any
   website?: any
+  onClick?: () => void
 }
 
 export const PeopleCard = (props: IPeopleCard) => {
@@ -64,7 +65,7 @@ export const PeopleCard = (props: IPeopleCard) => {
   return (
     <Grid item className={classes.root}>
       <Card className={classes.card}>
-        <CardActionArea>
+        <CardActionArea onClick={props.onClick}>
           {props.image && (
             <Center>
               <Avatar size="90px">
@@ -96,9 +97,21 @@ export const PeopleCard = (props: IPeopleCard) => {
             spacing={2}
             className={classes.iconArea}
           >
-            {props.github && <GithubIcon className={classes.icons} />}
-            {props.linkedin && <LinkedinIcon className={classes.icons} />}
-            {props.website && <WebsiteIcon className={classes.icons} />}
+            {props.github && (
+              <a href={props.github}>
+                <GithubIcon className={classes.icons} />
+              </a>
+            )}
+            {props.linkedin && (
+              <a href={props.linkedin}>
+                <LinkedinIcon className={classes.icons} />
+              </a>
+            )}
+            {props.website && (
+              <a href={props.website}>
+                <WebsiteIcon className={classes.icons} />
+              </a>
+            )}
           </Center>
         </CardActionArea>
       </Card>

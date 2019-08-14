@@ -24,8 +24,15 @@ const useStyles = makeStyles(() => ({
       transition: 'transform .2s ease-in-out',
     },
   },
+  actionArea: {
+    color: 'white',
+    '&:hover': {
+      color: 'white',
+    },
+  },
   button: {
     textAlign: 'right',
+    paddingBottom: '10px',
   },
   container: {
     margin: '5px',
@@ -82,6 +89,7 @@ export interface ICourseCard {
   date?: string | any
   level?: any
   type?: string | any
+  onClick?: () => void
 }
 
 export const CourseCard = (props: ICourseCard) => {
@@ -91,7 +99,7 @@ export const CourseCard = (props: ICourseCard) => {
   return (
     <Grid container item xs={12} md={academySection ? 12 : 6}>
       <Card className={classes.container}>
-        <CardActionArea>
+        <CardActionArea onClick={props.onClick} className={classes.actionArea}>
           <Grid container item>
             <Grid
               xs={12}
