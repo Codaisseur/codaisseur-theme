@@ -13,6 +13,10 @@ import {
   PeopleCard as CustomPeopleCard,
   IPeopleCard as ICustomPeopleCard,
 } from '../customComponents/PeopleCard'
+import {
+  ImageTextCard as CustomImageTextCard,
+  IImageTextCard as ICustomImageTextCard,
+} from '../customComponents/ImageTextCard'
 
 export interface ITheme extends Theme {
   palette: IPalette
@@ -60,5 +64,9 @@ export const Button = withStyles({
 
 export const CourseCard = withStyles({})(CustomCourseCard)
 export interface ICourseCard extends ICustomCourseCard {}
+
 export const PeopleCard = withStyles({})(CustomPeopleCard)
 export interface IPeopleCard extends ICustomPeopleCard {}
+
+export const ImageTextCard = withStyles({})(CustomImageTextCard)
+export interface IImageTextCard extends ICustomImageTextCard {}

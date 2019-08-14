@@ -1,15 +1,12 @@
 export const arrayOfNames = [
   'Irene',
   'Miloud',
-  'Mimi',
   'Alessandro',
   'Johan',
   'Danny',
-  'Rein',
   'Wouter',
   'Christopher Giammaria',
   'Lisa',
-  'Rembert',
   'Nomeacaso',
 ]
 
@@ -25,5 +22,5 @@ export const arrayOfTitles = [
 
 export const arrayOfDescriptions = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore, sed do eiusmod tempor incididunt ut labore'
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore, sed do eiusmod tempor incididunt ut labore',
 ]

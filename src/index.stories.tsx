@@ -91,7 +91,6 @@ export const genPeople = (name: any, content: any) => {
       github="https://material.io"
       linkedin="https://linkedin.com"
       website="https://google.com"
-      // https://prismic-io.s3.amazonaws.com/codaisseur-website%2F72443d20-2706-42dd-8394-d316dacc1ad4_step2.png
       image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6400efc3-67c6-418a-ac90-5deafc590e8a_irene+dn.jpg"
       // tslint:disable-next-line:jsx-no-lambda
       onClick={() => alert('click!')}

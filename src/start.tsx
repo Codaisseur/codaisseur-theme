@@ -68,6 +68,7 @@ ReactDOM.render(
       <div style={{ border: '5px solid black' }}>
         <h1>ImageText Cards</h1>
       </div>
+
       <Grid container justify="center">
         {arrayOfTitles.map((title: any) =>
           arrayOfDescriptions.map((content: any) => genImageTextCards(title, content))
