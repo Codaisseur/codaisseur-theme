@@ -2,8 +2,21 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from './index'
 import { genTypographys, genButtons, genCards, genPeople } from './index.stories'
+import { Grid } from '@material-ui/core'
 
 require('./serviceWorker')
+
+const arrayOfNames = [
+  'Irene',
+  'Miloud',
+  'Christopher',
+  'Alessandro',
+  'Johan',
+  'Danny',
+  'Luca Giammaria',
+  'Wouter',
+]
+const contentArray = ['Backend or Front-end Development', 'Front-end Development']
 
 ReactDOM.render(
   // tslint:disable-next-line: jsx-wrap-multiline
@@ -44,7 +57,11 @@ ReactDOM.render(
       <div style={{ border: '5px solid black' }}>
         <h1>People Cards</h1>
       </div>
-      {genPeople()}
+      <Grid container justify="center">
+        {contentArray.map((content: any) =>
+          arrayOfNames.map((name: any) => genPeople(name, content))
+        )}
+      </Grid>
     </>
   </ThemeProvider>,
   document.getElementById('root')

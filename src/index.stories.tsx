@@ -72,20 +72,16 @@ export const genCards = (type: any) => {
     </Grid>
   )
 }
-export const genPeople = () => {
+export const genPeople = (name: any, content: any) => {
   return (
-    <Grid container>
-      <PeopleCard
-        name="Pinco Pallino"
-        content="Backend or Front-end Development"
-        image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6400efc3-67c6-418a-ac90-5deafc590e8a_irene+dn.jpg"
-      />
-      <PeopleCard
-        name="Pinco Miloud"
-        content="Backend Development"
-        image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F3fb93f49-3630-4b09-8e17-b2b997131c12_profielfoto+%3C1mb.jpg"
-      />
-    </Grid>
+    <PeopleCard
+      name={name}
+      content={content}
+      github={true}
+      linkedin={true}
+      website={true}
+      image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6400efc3-67c6-418a-ac90-5deafc590e8a_irene+dn.jpg"
+    />
   )
 }
 
@@ -104,7 +100,35 @@ storiesOf('Override Typography', module)
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
 
+const arrayOfNames = [
+  'Irene',
+  'Miloud',
+  'Mimi',
+  'Nomelunghissimissimo',
+  'Johan',
+  'Danny',
+  'Rein',
+  'Wouter',
+  'Pieter',
+  'Lisa',
+  'Rembert',
+  'Nomeacaso',
+  'Nomeacasoperfarnumero',
+]
+
+const contentArray = [
+  'Backend or Front-end Development',
+  'Backend Development',
+  'Front-end Development',
+]
+
 storiesOf('Cards', module)
   .add('CourseCard wide', () => genCards('Academy'))
   .add('CourseCard small', () => genCards('Bootcamp'))
-  .add('PeopleCard', () => genPeople())
+  .add('PeopleCard', () => (
+    <Grid container justify="center">
+      {contentArray.map((content: any) =>
+        arrayOfNames.map((name: any) => genPeople(name, content))
+      )}
+    </Grid>
+  ))

@@ -11,12 +11,42 @@ import {
   Typography,
   makeStyles,
   Grid,
-  CardActions,
 } from '@material-ui/core'
 
 import Avatar from './Avatar'
 
-const useStyles = makeStyles(() => ({}))
+const useStyles = makeStyles(() => ({
+  root: {
+    margin: '8px',
+  },
+  card: {
+    width: '120px',
+    height: '265px',
+  },
+  content: {
+    padding: '16px',
+    height: '120px',
+  },
+  icons: {
+    width: '16px',
+    height: '16px',
+    margin: '8px',
+  },
+  iconArea: {
+    marginTop: '5px',
+    marginBottom: '20px',
+  },
+  image: {
+    marginTop: '10px',
+  },
+  name: {
+    wordWrap: 'break-word',
+    marginBottom: '5px',
+  },
+  stack: {
+    marginTop: '13px',
+  },
+}))
 
 export interface IPeopleCard {
   image?: any
@@ -32,25 +62,44 @@ export interface IPeopleCard {
 export const PeopleCard = (props: IPeopleCard) => {
   const classes = useStyles()
   return (
-    <Grid item xs={12} sm={6} md={2} lg={1} xl={1}>
-      <Card>
+    <Grid item className={classes.root}>
+      <Card className={classes.card}>
         <CardActionArea>
-          <Center>
-            <Avatar size="100px">
-              <img src={props.image} />
-            </Avatar>
+          {props.image && (
+            <Center>
+              <Avatar size="90px">
+                <img src={props.image} alt={props.name} className={classes.image} />
+              </Avatar>
+            </Center>
+          )}
+          <Grid container item>
+            <CardContent className={classes.content}>
+              {props.name && (
+                <Center>
+                  <Typography variant="body2" className={classes.name}>
+                    {props.name}
+                  </Typography>
+                </Center>
+              )}
+              {props.content && (
+                <Center>
+                  <Typography variant="caption" className={classes.stack}>
+                    {props.content}
+                  </Typography>
+                </Center>
+              )}
+            </CardContent>
+          </Grid>
+          <Center
+            direction="row"
+            justify="center"
+            spacing={2}
+            className={classes.iconArea}
+          >
+            {props.github && <GithubIcon className={classes.icons} />}
+            {props.linkedin && <LinkedinIcon className={classes.icons} />}
+            {props.website && <WebsiteIcon className={classes.icons} />}
           </Center>
-          <CardContent component="div">
-            {props.name && <Typography variant="body2">{props.name}</Typography>}
-            {props.content && <Typography variant="caption">{props.content}</Typography>}
-          </CardContent>
-          <CardActions>
-            <CardActions>
-              <GithubIcon style={{ height: '16px', width: '16px' }} />
-              <LinkedinIcon style={{ height: '16px', width: '16px' }} />
-              <WebsiteIcon style={{ height: '16px', width: '16px' }} />
-            </CardActions>
-          </CardActions>
         </CardActionArea>
       </Card>
     </Grid>

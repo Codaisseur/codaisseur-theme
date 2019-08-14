@@ -9,6 +9,10 @@ import {
   CourseCard as CustomCourseCard,
   ICourseCard as ICustomCourseCard,
 } from '../customComponents/CourseCard'
+import {
+  PeopleCard as CustomPeopleCard,
+  IPeopleCard as ICustomPeopleCard,
+} from '../customComponents/PeopleCard'
 
 export interface ITheme extends Theme {
   palette: IPalette
@@ -56,3 +60,5 @@ export const Button = withStyles({
 
 export const CourseCard = withStyles({})(CustomCourseCard)
 export interface ICourseCard extends ICustomCourseCard {}
+export const PeopleCard = withStyles({})(CustomPeopleCard)
+export interface IPeopleCard extends ICustomPeopleCard {}
