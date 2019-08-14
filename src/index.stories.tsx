@@ -2,6 +2,13 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { CourseCard } from './themes/customComponents/CourseCard'
 import { PeopleCard } from './themes/customComponents/PeopleCard'
+import { ImageTextCard } from './themes/customComponents/ImageTextCard'
+import {
+  arrayOfStacks,
+  arrayOfNames,
+  arrayOfTitles,
+  arrayOfDescriptions,
+} from './collections'
 
 import { Button, Typography, Grid } from '@material-ui/core'
 import { primary, secondary } from './themes/default/palette'
@@ -84,9 +91,21 @@ export const genPeople = (name: any, content: any) => {
       github="https://material.io"
       linkedin="https://linkedin.com"
       website="https://google.com"
+      // https://prismic-io.s3.amazonaws.com/codaisseur-website%2F72443d20-2706-42dd-8394-d316dacc1ad4_step2.png
       image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6400efc3-67c6-418a-ac90-5deafc590e8a_irene+dn.jpg"
       // tslint:disable-next-line:jsx-no-lambda
       onClick={() => alert('click!')}
+    />
+  )
+}
+
+export const genImageTextCards = (title: any, content: any) => {
+  return (
+    <ImageTextCard
+      title={title}
+      content={content}
+      image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6c321f36-95d4-4a01-a447-100f565a3624_step1.png"
+      // tslint:disable-next-line:jsx-no-lambda
     />
   )
 }
@@ -106,35 +125,20 @@ storiesOf('Override Typography', module)
   .add('TextSecondary', () => genTypographys('textSecondary'))
   .add('Error', () => genTypographys('error'))
 
-const arrayOfNames = [
-  'Irene',
-  'Miloud',
-  'Mimi',
-  'Nomelunghissimissimo',
-  'Johan',
-  'Danny',
-  'Rein',
-  'Wouter',
-  'Pieter',
-  'Lisa',
-  'Rembert',
-  'Nomeacaso',
-  'Nomeacasoperfarnumero',
-]
-
-const contentArray = [
-  'Backend or Front-end Development',
-  'Backend Development',
-  'Front-end Development',
-]
-
 storiesOf('Cards', module)
   .add('CourseCard wide', () => genCards('Academy'))
   .add('CourseCard small', () => genCards('Bootcamp'))
   .add('PeopleCard', () => (
     <Grid container justify="center">
-      {contentArray.map((content: any) =>
+      {arrayOfStacks.map((content: any) =>
         arrayOfNames.map((name: any) => genPeople(name, content))
+      )}
+    </Grid>
+  ))
+  .add('ImageTextCard', () => (
+    <Grid container justify="center">
+      {arrayOfTitles.map((title: any) =>
+        arrayOfDescriptions.map((content: any) => genPeople(title, content))
       )}
     </Grid>
   ))

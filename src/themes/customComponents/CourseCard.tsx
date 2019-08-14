@@ -102,16 +102,16 @@ export const CourseCard = (props: ICourseCard) => {
         <CardActionArea onClick={props.onClick} className={classes.actionArea}>
           <Grid container item>
             <Grid
-              xs={12}
               item
+              xs={12}
               md={academySection ? 7 : 12}
               lg={academySection ? 8 : 5}
               className={classes.image}
               style={{ backgroundImage: `url(${props.image})` }}
             />
             <Grid
-              xs={12}
               item
+              xs={12}
               md={academySection ? 5 : 12}
               lg={academySection ? 4 : 7}
               direction="column"
