@@ -48,7 +48,7 @@ export const EventCard = (props: IEventCard) => {
                 )}
               </Grid>
               <Center xs={4}>
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" color="secondary" size="small">
                   {props.cta}
                 </Button>
               </Center>
