@@ -84,4 +84,4 @@ export interface IImageTextCard extends ICustomImageTextCard {}
 
 // if index is loaded during API call, we dont want code to run
 // start is in .npmignore, try or fail
-// import('./start').catch(() => ({}))
+import('./start').catch(() => ({}))
