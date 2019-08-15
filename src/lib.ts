@@ -4,6 +4,20 @@ import { create, SheetsRegistry } from 'jss'
 import { GenerateClassNameOptions } from '@material-ui/styles/createGenerateClassName'
 import jssExtend from 'jss-plugin-extend'
 
+import { LoremIpsum } from 'lorem-ipsum'
+
+export const lorem = (num: number) =>
+  new LoremIpsum({
+    sentencesPerParagraph: {
+      max: 8,
+      min: 4,
+    },
+    wordsPerSentence: {
+      max: 16,
+      min: 4,
+    },
+  }).generateWords(num)
+
 const jss = create({ plugins: [...jssPreset().plugins, jssExtend()] })
 
 /**

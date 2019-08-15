@@ -17,6 +17,7 @@ const useStyles = makeStyles(() => ({
     margin: '7px',
   },
   button: {
+    marginTop: '-15px',
     paddingLeft: '8px',
   },
   title: {
