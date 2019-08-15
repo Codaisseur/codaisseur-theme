@@ -14,7 +14,17 @@ import { Button } from '../codaisseur/index'
 
 const useStyles = makeStyles(() => ({
   root: {
-    margin: '8px',
+    margin: '7px',
+  },
+  button: {
+    paddingLeft: '8px',
+  },
+  title: {
+    marginTop: '-10px',
+    marginBottom: '8px',
+  },
+  content: {
+    marginTop: '5px',
   },
 }))
 
@@ -36,18 +46,24 @@ export const EventCard = (props: IEventCard) => {
         <CardActionArea onClick={props.onClick}>
           <CardContent>
             <Grid container item>
-              <Grid item xs={8} direction="column">
-                {props.title && <Typography variant="h6">{props.title}</Typography>}
+              <Grid item xs={8} md={10} direction="column">
+                {props.title && (
+                  <Typography variant="h6" className={classes.title}>
+                    {props.title}
+                  </Typography>
+                )}
                 {props.date && (
                   <Typography variant="overline" color="secondary">
                     {props.date}
                   </Typography>
                 )}
                 {props.content && (
-                  <Typography variant="body1">{props.content}</Typography>
+                  <Typography variant="body1" className={classes.content}>
+                    {props.content}
+                  </Typography>
                 )}
               </Grid>
-              <Center xs={4}>
+              <Center xs={4} md={2} className={classes.button}>
                 <Button variant="contained" color="secondary" size="small">
                   {props.cta}
                 </Button>
