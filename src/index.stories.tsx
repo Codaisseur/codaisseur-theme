@@ -3,11 +3,16 @@ import { storiesOf } from '@storybook/react'
 import { CourseCard } from './themes/customComponents/CourseCard'
 import { PeopleCard } from './themes/customComponents/PeopleCard'
 import { ImageTextCard } from './themes/customComponents/ImageTextCard'
+import { EventCard } from './themes/customComponents/EventCard'
+
 import {
   arrayOfStacks,
   arrayOfNames,
   arrayOfTitles,
   arrayOfDescriptions,
+  arrayOfCtas,
+  arrayOfEventsDescriptions,
+  arrayOfEvents,
 } from './collections'
 
 import { Button, Typography, Grid } from '@material-ui/core'
@@ -104,7 +109,18 @@ export const genImageTextCards = (title: any, content: any) => {
       title={title}
       content={content}
       image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6c321f36-95d4-4a01-a447-100f565a3624_step1.png"
+    />
+  )
+}
+
+export const genEventCards = (title: any, content: any, cta: any) => {
+  return (
+    <EventCard
+      title={title}
+      content={content}
+      cta={cta}
       // tslint:disable-next-line:jsx-no-lambda
+      onClick={() => alert('click!')}
     />
   )
 }
@@ -137,7 +153,16 @@ storiesOf('Cards', module)
   .add('ImageTextCard', () => (
     <Grid container justify="center">
       {arrayOfTitles.map((title: any) =>
-        arrayOfDescriptions.map((content: any) => genPeople(title, content))
+        arrayOfDescriptions.map((content: any) => genImageTextCards(title, content))
+      )}
+    </Grid>
+  ))
+  .add('EventCard', () => (
+    <Grid container justify="center">
+      {arrayOfEvents.map((title: any) =>
+        arrayOfEventsDescriptions.map((content: any) =>
+          arrayOfCtas.map((cta: any) => genEventCards(title, content, cta))
+        )
       )}
     </Grid>
   ))

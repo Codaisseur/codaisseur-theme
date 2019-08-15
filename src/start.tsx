@@ -7,12 +7,16 @@ import {
   genCards,
   genPeople,
   genImageTextCards,
+  genEventCards,
 } from './index.stories'
 import {
   arrayOfStacks,
   arrayOfNames,
   arrayOfTitles,
   arrayOfDescriptions,
+  arrayOfEvents,
+  arrayOfEventsDescriptions,
+  arrayOfCtas,
 } from './collections'
 
 import { Grid } from '@material-ui/core'
@@ -72,6 +76,19 @@ ReactDOM.render(
       <Grid container justify="center">
         {arrayOfTitles.map((title: any) =>
           arrayOfDescriptions.map((content: any) => genImageTextCards(title, content))
+        )}
+      </Grid>
+    </>
+    <>
+      <div style={{ border: '5px solid black' }}>
+        <h1>Event Cards</h1>
+      </div>
+
+      <Grid container justify="center">
+        {arrayOfEvents.map((title: any) =>
+          arrayOfEventsDescriptions.map((content: any) =>
+            arrayOfCtas.map((cta: any) => genEventCards(title, content, cta))
+          )
         )}
       </Grid>
     </>
