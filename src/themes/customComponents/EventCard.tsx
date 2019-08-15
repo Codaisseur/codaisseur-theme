@@ -24,37 +24,36 @@ export interface IEventCard {
   title?: any
   date?: any
   content?: any
-  cta?: any
+  cta?: any | 'RSVP'
   onClick?: () => void
 }
 
 export const EventCard = (props: IEventCard) => {
   const classes = useStyles()
   return (
-    <Grid item className={classes.root} md={6}>
+    <Grid container item className={classes.root}>
       <Card>
         <CardActionArea onClick={props.onClick}>
-          <Grid item justify="center" alignItems="center">
-            <CardContent>
-              {props.title && (
-                <Center>
-                  <Typography variant="h6">{props.title}</Typography>
-                </Center>
-              )}
-              {props.content && (
-                <Center>
+          <CardContent>
+            <Grid container item>
+              <Grid item xs={8} direction="column">
+                {props.title && <Typography variant="h6">{props.title}</Typography>}
+                {props.date && (
+                  <Typography variant="overline" color="secondary">
+                    {props.date}
+                  </Typography>
+                )}
+                {props.content && (
                   <Typography variant="body1">{props.content}</Typography>
-                </Center>
-              )}
-              {props.cta && (
-                <div>
-                  <Button variant="contained" color="secondary">
-                    {props.cta}
-                  </Button>
-                </div>
-              )}
-            </CardContent>
-          </Grid>
+                )}
+              </Grid>
+              <Center xs={4}>
+                <Button variant="contained" color="secondary">
+                  {props.cta}
+                </Button>
+              </Center>
+            </Grid>
+          </CardContent>
         </CardActionArea>
       </Card>
     </Grid>

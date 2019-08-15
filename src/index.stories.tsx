@@ -119,6 +119,7 @@ export const genEventCards = (title: any, content: any, cta: any) => {
       title={title}
       content={content}
       cta={cta}
+      date="September 5th, 2019 5:30pm - September 5th, 2019 8:30pm"
       // tslint:disable-next-line:jsx-no-lambda
       onClick={() => alert('click!')}
     />

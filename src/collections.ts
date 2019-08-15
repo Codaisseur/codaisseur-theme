@@ -30,6 +30,7 @@ export const arrayOfEvents = ['Code Academy', 'TypeScript & GraphQL Bootcamp']
 export const arrayOfEventsDescriptions = [
   'Collaborate with others to build and deploy different types of web applications.',
   "Interested in coding but don't know where to begin? Join us at our Open Evening so we can tell you more about our programs, scholarships and your opportunity of a lifetime",
+  '',
 ]
 
-export const arrayOfCtas = ['RSVP', 'Apply now']
+export const arrayOfCtas = ['RSVP']
