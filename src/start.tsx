@@ -1,7 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from './index'
-import { genTypographys, genButtons, genCards } from './index.stories'
+import {
+  genTypographys,
+  genButtons,
+  genCards,
+  genPeople,
+  genImageTextCards,
+} from './index.stories'
+import {
+  arrayOfStacks,
+  arrayOfNames,
+  arrayOfTitles,
+  arrayOfDescriptions,
+} from './collections'
+
+import { Grid } from '@material-ui/core'
 
 require('./serviceWorker')
 
@@ -40,6 +54,27 @@ ReactDOM.render(
         {genCards(type)}
       </>
     ))}
+    <>
+      <div style={{ border: '5px solid black' }}>
+        <h1>People Cards</h1>
+      </div>
+      <Grid container justify="center">
+        {arrayOfStacks.map((content: any) =>
+          arrayOfNames.map((name: any) => genPeople(name, content))
+        )}
+      </Grid>
+    </>
+    <>
+      <div style={{ border: '5px solid black' }}>
+        <h1>ImageText Cards</h1>
+      </div>
+
+      <Grid container justify="center">
+        {arrayOfTitles.map((title: any) =>
+          arrayOfDescriptions.map((content: any) => genImageTextCards(title, content))
+        )}
+      </Grid>
+    </>
   </ThemeProvider>,
   document.getElementById('root')
 )

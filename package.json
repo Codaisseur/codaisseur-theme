@@ -17,7 +17,9 @@
     "@types/classnames": "^2.2.9",
     "jss": "^10.0.0-alpha.23",
     "jss-plugin-extend": "^10.0.0-alpha.23",
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "react-social-icons": "^4.1.0",
+    "react-swipeable-views": "^0.13.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,6 +38,7 @@
     "@storybook/react": "^5.0.11",
     "@types/node": "^12.6.8",
     "@types/react-dom": "^16.8.5",
+    "@types/react-swipeable-views": "^0.13.0",
     "@types/storybook__react": "^4.0.1",
     "husky": "^3.0.0",
     "lint-staged": "^9.2.0",
