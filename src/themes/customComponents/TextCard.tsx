@@ -1,5 +1,4 @@
 import React from 'react'
-import Center from './Center'
 
 import {
   Card,
@@ -9,8 +8,6 @@ import {
   makeStyles,
   Grid,
 } from '@material-ui/core'
-
-import { Button } from '../codaisseur/index'
 
 const useStyles = makeStyles(() => ({
   root: {
