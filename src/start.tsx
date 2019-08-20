@@ -8,6 +8,7 @@ import {
   genPeople,
   genImageTextCards,
   genEventCards,
+  genTextCards,
 } from './index.stories'
 import {
   arrayOfStacks,
@@ -89,6 +90,23 @@ ReactDOM.render(
           arrayOfEventsDescriptions.map((content: any) =>
             arrayOfCtas.map((cta: any) => genEventCards(title, content, cta))
           )
+        )}
+      </Grid>
+    </>
+    <>
+      <div style={{ border: '5px solid black' }}>
+        <h1>Text Cards</h1>
+      </div>
+      <Grid container justify="center">
+        {genTextCards(
+          'TypeScript & GraphQL Bootcamp',
+          'Collaborate with others to build and deploy different types of web applications.',
+          'Monday'
+        )}
+        {genTextCards(
+          'Set Up Environment',
+          'Collaborate with others to build and deploy different types of web applications. Collaborate with others to build and deploy different types of web applications.',
+          'Day 1'
         )}
       </Grid>
     </>

@@ -15,9 +15,9 @@ const useStyles = makeStyles(() => ({
     margin: '8px',
   },
   actionArea: {
-    color: 'white',
+    color: 'transparent',
     '&:hover': {
-      color: 'white',
+      color: 'transparent',
       cursor: 'auto',
     },
   },

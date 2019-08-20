@@ -4,6 +4,7 @@ import { CourseCard } from './themes/customComponents/CourseCard'
 import { PeopleCard } from './themes/customComponents/PeopleCard'
 import { ImageTextCard } from './themes/customComponents/ImageTextCard'
 import { EventCard } from './themes/customComponents/EventCard'
+import { TextCard } from './themes/customComponents/TextCard'
 
 import {
   arrayOfStacks,
@@ -126,6 +127,10 @@ export const genEventCards = (title: any, content: any, cta: any) => {
   )
 }
 
+export const genTextCards = (title: any, content: any, subtitle: any) => {
+  return <TextCard title={title} content={content} subtitle={subtitle} />
+}
+
 storiesOf('Override Buttons', module)
   .add('Primary', () => genButtons('primary'))
   .add('Secondary', () => genButtons('secondary'))
@@ -164,6 +169,20 @@ storiesOf('Cards', module)
         arrayOfEventsDescriptions.map((content: any) =>
           arrayOfCtas.map((cta: any) => genEventCards(title, content, cta))
         )
+      )}
+    </Grid>
+  ))
+  .add('TextCard', () => (
+    <Grid container justify="center">
+      {genTextCards(
+        'TypeScript & GraphQL Bootcamp',
+        'Collaborate with others to build and deploy different types of web applications.',
+        'Monday'
+      )}
+      {genTextCards(
+        'Set Up Environment',
+        'Collaborate with others to build and deploy different types of web applications. Collaborate with others to build and deploy different types of web applications.',
+        'Day 1'
       )}
     </Grid>
   ))
