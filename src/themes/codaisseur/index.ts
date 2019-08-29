@@ -5,18 +5,35 @@ import { palette, typography, overrides } from '../default'
 import { IPalette } from '../default/palette'
 import { IBreakpoints } from '../default/breakpoints'
 import { ITypography } from '../default/typography'
+
 import {
   CourseCard as CustomCourseCard,
   ICourseCard as ICustomCourseCard,
 } from '../customComponents/CourseCard'
+
 import {
   PeopleCard as CustomPeopleCard,
   IPeopleCard as ICustomPeopleCard,
 } from '../customComponents/PeopleCard'
+
 import {
   ImageTextCard as CustomImageTextCard,
   IImageTextCard as ICustomImageTextCard,
 } from '../customComponents/ImageTextCard'
+
+import {
+  EventCard as CustomEventCard,
+  IEventCard as ICustomEventCard,
+} from '../customComponents/EventCard'
+
+import {
+  TextCard as CustomTextCard,
+  ITextCard as ICustomTextCard,
+} from '../customComponents/TextCard'
+
+import { Center as CustomCenter } from '../customComponents/Center'
+
+import { Avatar as CustomAvatar } from '../customComponents/Avatar'
 
 export interface ITheme extends Theme {
   palette: IPalette
@@ -70,3 +87,12 @@ export interface IPeopleCard extends ICustomPeopleCard {}
 
 export const ImageTextCard = withStyles({})(CustomImageTextCard)
 export interface IImageTextCard extends ICustomImageTextCard {}
+
+export const EventCard = withStyles({})(CustomEventCard)
+export interface IEventCard extends ICustomEventCard {}
+
+export const TextCard = withStyles({})(CustomTextCard)
+export interface ITextCard extends ICustomTextCard {}
+
+export const Center = withStyles({})(CustomCenter)
+export const Avatar = withStyles({})(CustomAvatar)

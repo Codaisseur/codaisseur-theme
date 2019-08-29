@@ -1,5 +1,5 @@
 import React from 'react'
-import Center from './Center'
+import { Center } from './Center'
 
 import {
   Card,
