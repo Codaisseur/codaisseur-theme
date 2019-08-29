@@ -3,11 +3,17 @@ import { storiesOf } from '@storybook/react'
 import { CourseCard } from './themes/customComponents/CourseCard'
 import { PeopleCard } from './themes/customComponents/PeopleCard'
 import { ImageTextCard } from './themes/customComponents/ImageTextCard'
+import { EventCard } from './themes/customComponents/EventCard'
+import { TextCard } from './themes/customComponents/TextCard'
+
 import {
   arrayOfStacks,
   arrayOfNames,
   arrayOfTitles,
   arrayOfDescriptions,
+  arrayOfCtas,
+  arrayOfEventsDescriptions,
+  arrayOfEvents,
 } from './collections'
 
 import { Button, Typography, Grid } from '@material-ui/core'
@@ -104,9 +110,25 @@ export const genImageTextCards = (title: any, content: any) => {
       title={title}
       content={content}
       image="https://prismic-io.s3.amazonaws.com/codaisseur-website%2F6c321f36-95d4-4a01-a447-100f565a3624_step1.png"
-      // tslint:disable-next-line:jsx-no-lambda
     />
   )
+}
+
+export const genEventCards = (title: any, content: any, cta: any) => {
+  return (
+    <EventCard
+      title={title}
+      content={content}
+      cta={cta}
+      date="September 5th, 2019 5:30pm - September 5th, 2019 8:30pm"
+      // tslint:disable-next-line:jsx-no-lambda
+      onClick={() => alert('click!')}
+    />
+  )
+}
+
+export const genTextCards = (title: any, content: any, subtitle: any) => {
+  return <TextCard title={title} content={content} subtitle={subtitle} />
 }
 
 storiesOf('Override Buttons', module)
@@ -137,7 +159,30 @@ storiesOf('Cards', module)
   .add('ImageTextCard', () => (
     <Grid container justify="center">
       {arrayOfTitles.map((title: any) =>
-        arrayOfDescriptions.map((content: any) => genPeople(title, content))
+        arrayOfDescriptions.map((content: any) => genImageTextCards(title, content))
+      )}
+    </Grid>
+  ))
+  .add('EventCard', () => (
+    <Grid container justify="center">
+      {arrayOfEvents.map((title: any) =>
+        arrayOfEventsDescriptions.map((content: any) =>
+          arrayOfCtas.map((cta: any) => genEventCards(title, content, cta))
+        )
+      )}
+    </Grid>
+  ))
+  .add('TextCard', () => (
+    <Grid container justify="center">
+      {genTextCards(
+        'TypeScript & GraphQL Bootcamp',
+        'Collaborate with others to build and deploy different types of web applications.',
+        'Monday'
+      )}
+      {genTextCards(
+        'Set Up Environment',
+        'Collaborate with others to build and deploy different types of web applications. Collaborate with others to build and deploy different types of web applications.',
+        'Day 1'
       )}
     </Grid>
   ))

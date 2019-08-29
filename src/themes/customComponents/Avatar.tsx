@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   }),
 })
 
-export default ({ children, size }: any) => {
+export const Avatar = ({ children, size }: any) => {
   const classes = useStyles({ size })
   return <div className={classes.root}>{children}</div>
 }

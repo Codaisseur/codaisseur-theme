@@ -1,5 +1,5 @@
 import React from 'react'
-import Center from './Center'
+import { Center } from './Center'
 
 import {
   Card,
@@ -15,9 +15,9 @@ const useStyles = makeStyles(() => ({
     margin: '8px',
   },
   actionArea: {
-    color: 'white',
+    color: 'transparent',
     '&:hover': {
-      color: 'white',
+      color: 'transparent',
       cursor: 'auto',
     },
   },

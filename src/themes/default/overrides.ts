@@ -28,6 +28,12 @@ export const MuiButton = {
       color: secondary.main,
     },
   },
+  sizeLarge: {
+    padding: '15px 25px',
+  },
+  sizeSmall: {
+    padding: '12px 22px',
+  },
 }
 
 export const MuiCard = {

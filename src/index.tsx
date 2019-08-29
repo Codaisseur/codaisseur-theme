@@ -18,6 +18,12 @@ import theme, {
   IPeopleCard as ICustomPeopleCard,
   ImageTextCard as StyledImageTextCard,
   IImageTextCard as ICustomImageTextCard,
+  TextCard as StyledTextCard,
+  ITextCard as ICustomTextCard,
+  EventCard as StyledEventCard,
+  IEventCard as ICustomEventCard,
+  Avatar as StyledAvatar,
+  Center as StyledCenter,
   ITheme,
 } from './themes/codaisseur'
 
@@ -81,6 +87,15 @@ export interface IPeopleCard extends ICustomPeopleCard {}
 
 export const ImageTextCard = StyledImageTextCard
 export interface IImageTextCard extends ICustomImageTextCard {}
+
+export const TextCard = StyledTextCard
+export interface ITextCard extends ICustomTextCard {}
+
+export const EventCard = StyledEventCard
+export interface IEventCard extends ICustomEventCard {}
+
+export const Avatar = StyledAvatar
+export const Center = StyledCenter
 
 // if index is loaded during API call, we dont want code to run
 // start is in .npmignore, try or fail

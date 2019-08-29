@@ -2,7 +2,7 @@ import React from 'react'
 import { GithubIcon } from '../../icons/github'
 import { LinkedinIcon } from '../../icons/linkedin'
 import { WebsiteIcon } from '../../icons/website'
-import Center from './Center'
+import { Center } from './Center'
 
 import {
   Card,
@@ -13,7 +13,7 @@ import {
   Grid,
 } from '@material-ui/core'
 
-import Avatar from './Avatar'
+import { Avatar } from './Avatar'
 
 const useStyles = makeStyles(() => ({
   root: {
