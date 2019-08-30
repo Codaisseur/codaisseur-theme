@@ -68,6 +68,7 @@ const useStyles = makeStyles(() => ({
   iconsLayout: {
     [breakpoints.down('md')]: {
       justifyContent: 'flex-start',
+      flexWrap: 'nowrap',
     },
   },
   iconSpacing: {
