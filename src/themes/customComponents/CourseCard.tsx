@@ -7,6 +7,7 @@ import { RightArrowIcon } from '../../icons/arrowRight'
 import { Button } from '../codaisseur/index'
 import { grey } from '../default/palette'
 import { breakpoints } from '../default/breakpoints'
+import classnames from 'classnames'
 
 import {
   Card,
@@ -68,10 +69,27 @@ const useStyles = makeStyles(() => ({
   iconsLayout: {
     [breakpoints.down('md')]: {
       justifyContent: 'flex-start',
+      flexWrap: 'nowrap',
     },
   },
   iconSpacing: {
     margin: '8px 0',
+  },
+  spacing: {
+    padding: '16px 32px 16px 0px',
+    [breakpoints.down(400)]: {
+      padding: '10px 0px 10px 0px',
+    },
+  },
+  rightIcons: {
+    [breakpoints.down(400)]: {
+      marginLeft: '10px',
+    },
+  },
+  leftIcons: {
+    [breakpoints.down(400)]: {
+      marginLeft: '-5px',
+    },
   },
 }))
 
@@ -128,11 +146,14 @@ export const CourseCard = (props: ICourseCard) => {
                   <Grid
                     container
                     xs={12}
-                    spacing={4}
                     justify="space-evenly"
                     className={classes.iconsLayout}
                   >
-                    <Grid item xs="auto">
+                    <Grid
+                      item
+                      xs="auto"
+                      className={classnames(classes.spacing, classes.leftIcons)}
+                    >
                       <Grid item xs={12} className={classes.iconSpacing}>
                         <ClockIcon className={classes.icon} /> {props.duration} weeks
                       </Grid>
@@ -140,7 +161,11 @@ export const CourseCard = (props: ICourseCard) => {
                         <TagIcon className={classes.icon} /> {props.price}€
                       </Grid>
                     </Grid>
-                    <Grid item xs="auto">
+                    <Grid
+                      item
+                      xs="auto"
+                      className={classnames(classes.spacing, classes.rightIcons)}
+                    >
                       <Grid item xs={12} className={classes.iconSpacing}>
                         <CalendarIcon className={classes.icon} /> {props.date}
                       </Grid>
