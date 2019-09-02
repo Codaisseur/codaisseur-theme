@@ -76,12 +76,13 @@ const useStyles = makeStyles(() => ({
     margin: '8px 0',
   },
   spacing: {
-    padding: '16px 32px 16px 0px',
+    padding: '16px 0px 16px 0px',
     [breakpoints.down(400)]: {
       padding: '10px 0px 10px 0px',
     },
   },
   rightIcons: {
+    marginLeft: '16px',
     [breakpoints.down(400)]: {
       marginLeft: '10px',
     },
